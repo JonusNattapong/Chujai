@@ -1,14 +1,7 @@
-# 🍑 Zombitxanus AI: Autonomous Networked Utility System
+# 🍑 Chujai AI: ระบบอัตโนมัติเครือข่ายอัจฉริยะ
 
 <p align="center">
-  <h4 align="center">
-    <a href="README.md">English</a> |
-    <a href="README_TH.md">ภาษาไทย</a>
-  </h4>
-</p>
-
-<p align="center">
-  <img src="assets/anus_logo.png" alt="Anus AI Logo" width="200"/>
+  <img src="assets/anus_logo.png" alt="Chujai AI Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -16,254 +9,247 @@
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.11+-blue.svg" alt="Python version"></a>
   <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
   <a href="https://github.com/nikmcfly/ANUS/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" alt="Contributions welcome"></a>
-  <br>
-  <a href="https://github.com/nikmcfly/ANUS/stargazers"><img src="https://img.shields.io/github/stars/nikmcfly/ANUS.svg?style=social&label=Star" alt="GitHub stars"></a>
-  <a href="https://github.com/nikmcfly/ANUS/network/members"><img src="https://img.shields.io/github/forks/nikmcfly/ANUS.svg?style=social&label=Fork" alt="GitHub forks"></a>
-  <a href="https://github.com/nikmcfly/ANUS/issues"><img src="https://img.shields.io/github/issues/nikmcfly/ANUS.svg" alt="GitHub issues"></a>
-  <a href="https://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <a href="https://anus-ai.github.io/docs"><img src="https://img.shields.io/badge/docs-latest-brightgreen.svg" alt="Documentation Status"></a>
-  <a href="https://discord.gg/anus-ai"><img src="https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
-## Table of Contents
+## สารบัญ
 
-- [Introduction](#-introduction)
-- [Why Anus?](#-why-anus)
-- [Features & Capabilities](#-features--capabilities)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Usage Examples](#-usage-examples)
-- [Documentation](#-documentation)
-- [Contributing](#-contributing)
-- [Community](#-community)
-- [License](#-license)
+- [บทนำ](#-บทนำ)
+- [ทำไมต้อง Chujai?](#-ทำไมต้อง-chujai)
+- [คุณสมบัติและความสามารถ](#-คุณสมบัติและความสามารถ)
+- [การติดตั้ง](#-การติดตั้ง)
+- [เริ่มต้นใช้งาน](#-เริ่มต้นใช้งาน)
+- [ตัวอย่างการใช้งาน](#-ตัวอย่างการใช้งาน)
+- [เอกสารประกอบ](#-เอกสารประกอบ)
+- [การมีส่วนร่วม](#-การมีส่วนร่วม)
+- [ชุมชน](#-ชุมชน)
+- [ลิขสิทธิ์](#-ลิขสิทธิ์)
 
-## 🌟 Introduction
+## 🌟 บทนำ
 
-**Zombitxanus AI** (Autonomous Networked Utility System) is a powerful, flexible, and accessible open-source AI agent framework designed to revolutionize task automation. Built with modern AI technologies and best practices, Zombitxanus AI represents the next generation of AI agent frameworks, offering unparalleled capabilities and ease of use.
+**Chujai AI** (ระบบอัตโนมัติเครือข่ายอัจฉริยะ) เป็นเฟรมเวิร์กตัวแทน AI แบบโอเพนซอร์สที่ทรงพลัง ยืดหยุ่น และเข้าถึงง่าย ออกแบบมาเพื่อปฏิวัติการทำงานอัตโนมัติ สร้างขึ้นด้วยเทคโนโลยี AI สมัยใหม่และแนวปฏิบัติที่ดีที่สุด Chujai AI แสดงถึงเฟรมเวิร์กตัวแทน AI ยุคถัดไป ที่มอบความสามารถและความง่ายในการใช้งานที่ไม่มีใครเทียบได้
 
-Zombitxanus AI empowers users to create AI agents that can:
-- Execute complex tasks through natural language instructions
-- Collaborate in multi-agent environments to solve problems
-- Interact with web services, documents, and code
-- Process multimodal inputs including text, images, and audio
-- Adapt to different domains and use cases
+Chujai AI ช่วยให้ผู้ใช้สามารถสร้างตัวแทน AI ที่สามารถ:
+- ดำเนินการงานที่ซับซ้อนผ่านคำสั่งภาษาธรรมชาติ
+- ทำงานร่วมกันในสภาพแวดล้อมแบบหลายตัวแทนเพื่อแก้ปัญหา
+- โต้ตอบกับบริการเว็บ เอกสาร และโค้ด
+- ประมวลผลข้อมูลหลายรูปแบบรวมถึงข้อความ รูปภาพ และเสียง
+- ปรับตัวให้เข้ากับโดเมนและกรณีการใช้งานที่แตกต่างกัน
 
-Whether you're a developer looking to build AI-powered applications, a researcher exploring agent-based systems, or an enthusiast interested in the latest AI technologies, Zombitxanus AI provides the tools and flexibility you need to succeed.
+ไม่ว่าคุณจะเป็นนักพัฒนาที่ต้องการสร้างแอปพลิเคชันที่ขับเคลื่อนด้วย AI นักวิจัยที่สำรวจระบบที่ใช้ตัวแทน หรือผู้ที่สนใจในเทคโนโลยี AI ล่าสุด Chujai AI มอบเครื่องมือและความยืดหยุ่นที่คุณต้องการเพื่อให้ประสบความสำเร็จ
 
-## 💡 Why Anus?
+## 💡 ทำไมต้อง Chujai?
 
-- **Truly Open Source**: No barriers, no invite codes, just pure open-source goodness
-- **Hybrid Architecture**: Combines single-agent simplicity with multi-agent power
-- **Flexible Model Support**: Works with OpenAI models, open-source models, or your own
-- **Comprehensive Tool Ecosystem**: Web automation, document processing, code execution, and more
-- **Community-First Design**: Built for contributions and extensions
-- **Transparent Operation**: Clear explanations of all agent actions and decisions
-- **Cross-Platform**: Works across different operating systems and environments
+- **โอเพนซอร์สอย่างแท้จริง**: ไม่มีข้อจำกัด ไม่ต้องใช้รหัสเชิญ แค่โอเพนซอร์สล้วนๆ
+- **สถาปัตยกรรมแบบไฮบริด**: ผสมผสานความเรียบง่ายของตัวแทนเดี่ยวกับพลังของหลายตัวแทน
+- **รองรับโมเดลที่หลากหลาย**: ทำงานได้กับโมเดล OpenAI, โมเดลโอเพนซอร์ส หรือโมเดลของคุณเอง
+- **ระบบนิเวศเครื่องมือที่ครอบคลุม**: การทำงานอัตโนมัติบนเว็บ การประมวลผลเอกสาร การเรียกใช้โค้ด และอื่นๆ
+- **ออกแบบโดยคำนึงถึงชุมชน**: สร้างขึ้นเพื่อการมีส่วนร่วมและการขยายความสามารถ
+- **การทำงานที่โปร่งใส**: อธิบายการกระทำและการตัดสินใจของตัวแทนอย่างชัดเจน
+- **ข้ามแพลตฟอร์ม**: ทำงานได้บนระบบปฏิบัติการและสภาพแวดล้อมที่แตกต่างกัน
 
-## ✨ Features & Capabilities
+## ✨ คุณสมบัติและความสามารถ
 
-### 🧠 Advanced AI Agent Architecture
+### 🧠 สถาปัตยกรรมตัวแทน AI ขั้นสูง
 
-- **Hybrid Agent System**: Seamlessly switch between single-agent and multi-agent modes based on task complexity
-- **Dynamic Task Planning**: Sophisticated planning system that breaks down complex tasks into manageable steps
-- **Adaptive Resource Allocation**: Intelligently allocates computational resources based on task requirements
-- **Memory Management**: Short-term and long-term memory systems for context retention across conversations
-- **Explainable Actions**: Transparent reasoning and decision-making processes
+- **ระบบตัวแทนแบบไฮบริด**: สลับระหว่างโหมดตัวแทนเดี่ยวและหลายตัวแทนได้อย่างราบรื่นตามความซับซ้อนของงาน
+- **การวางแผนงานแบบไดนามิก**: ระบบการวางแผนที่ซับซ้อนซึ่งแบ่งงานที่ซับซ้อนออกเป็นขั้นตอนที่จัดการได้
+- **การจัดสรรทรัพยากรแบบปรับตัว**: จัดสรรทรัพยากรการคำนวณอย่างชาญฉลาดตามข้อกำหนดของงาน
+- **การจัดการหน่วยความจำ**: ระบบหน่วยความจำระยะสั้นและระยะยาวสำหรับการเก็บรักษาบริบทในการสนทนา
+- **การกระทำที่อธิบายได้**: กระบวนการให้เหตุผลและการตัดสินใจที่โปร่งใส
 
-### 🤝 Multi-Agent Collaboration
+### 🤝 การทำงานร่วมกันแบบหลายตัวแทน
 
-- **Specialized Agent Roles**: Pre-defined roles like Researcher, Coder, Planner, and more
-- **Custom Role Creation**: Define your own agent roles with specific capabilities and knowledge
-- **Inter-Agent Communication**: Structured protocols for efficient agent-to-agent communication
-- **Consensus Mechanisms**: Collaborative decision-making through agent voting and consensus
-- **Conflict Resolution**: Sophisticated protocols for resolving disagreements between agents
+- **บทบาทตัวแทนเฉพาะทาง**: บทบาทที่กำหนดไว้ล่วงหน้า เช่น นักวิจัย โปรแกรมเมอร์ นักวางแผน และอื่นๆ
+- **การสร้างบทบาทที่กำหนดเอง**: กำหนดบทบาทตัวแทนของคุณเองด้วยความสามารถและความรู้เฉพาะ
+- **การสื่อสารระหว่างตัวแทน**: โปรโตคอลที่มีโครงสร้างสำหรับการสื่อสารระหว่างตัวแทนที่มีประสิทธิภาพ
+- **กลไกฉันทามติ**: การตัดสินใจร่วมกันผ่านการลงคะแนนเสียงและฉันทามติของตัวแทน
+- **การแก้ไขข้อขัดแย้ง**: โปรโตคอลที่ซับซ้อนสำหรับการแก้ไขข้อขัดแย้งระหว่างตัวแทน
 
-### 🛠️ Comprehensive Tool Ecosystem
+### 🛠️ ระบบนิเวศเครื่องมือที่ครอบคลุม
 
-- **Web Interaction**:
-  - Full browser automation via Playwright
-  - Web scraping and data extraction
-  - Form filling and submission
-  - Authentication handling
+- **การโต้ตอบกับเว็บ**:
+  - ระบบอัตโนมัติของเบราว์เซอร์เต็มรูปแบบผ่าน Playwright
+  - การขูดเว็บและการดึงข้อมูล
+  - การกรอกและส่งแบบฟอร์ม
+  - การจัดการการตรวจสอบสิทธิ์
 
-- **Information Retrieval**:
-  - Search engine integration
-  - Wikipedia access
-  - News and current events sources
-  - Specialized knowledge bases
+- **การดึงข้อมูล**:
+  - การรวมเครื่องมือค้นหา
+  - การเข้าถึง Wikipedia
+  - แหล่งข่าวและเหตุการณ์ปัจจุบัน
+  - ฐานความรู้เฉพาะทาง
 
-- **Document Processing**:
-  - PDF parsing and analysis
-  - Office document handling (Word, Excel, PowerPoint)
-  - Image recognition and OCR
-  - Data extraction and transformation
+- **การประมวลผลเอกสาร**:
+  - การแยกวิเคราะห์และวิเคราะห์ PDF
+  - การจัดการเอกสาร Office (Word, Excel, PowerPoint)
+  - การจดจำภาพและ OCR
+  - การดึงและแปลงข้อมูล
 
-- **Code Execution**:
-  - Secure Python execution sandbox
-  - Multiple language support
-  - Package management
-  - Output capture and analysis
+- **การเรียกใช้โค้ด**:
+  - แซนด์บ็อกซ์การเรียกใช้ Python ที่ปลอดภัย
+  - การรองรับหลายภาษา
+  - การจัดการแพ็คเกจ
+  - การจับภาพและวิเคราะห์ผลลัพธ์
 
-- **Multimodal Processing**:
-  - Image analysis and generation
-  - Audio processing and transcription
-  - Video analysis and summarization
-  - Chart and graph interpretation
+- **การประมวลผลหลายรูปแบบ**:
+  - การวิเคราะห์และสร้างภาพ
+  - การประมวลผลและถอดเสียง
+  - การวิเคราะห์และสรุปวิดีโอ
+  - การตีความแผนภูมิและกราฟ
 
-### 🔄 Flexible Model Integration
+### 🔄 การรวมโมเดลที่ยืดหยุ่น
 
-- **OpenAI API Support**: Seamless integration with GPT-4 and newer models
-- **Open-Source Models**: Support for Llama, Mistral, and other open-source models
-- **Local Deployment**: Run models locally for privacy and reduced costs
-- **Model Switching**: Automatically select the appropriate model based on task requirements
-- **Fallback Mechanisms**: Gracefully handle API issues by switching to alternative models
+- **การรองรับ OpenAI API**: การรวมเข้ากับ GPT-4 และโมเดลใหม่กว่าได้อย่างราบรื่น
+- **โมเดลโอเพนซอร์ส**: การรองรับ Llama, Mistral และโมเดลโอเพนซอร์สอื่นๆ
+- **การปรับใช้ในเครื่อง**: เรียกใช้โมเดลในเครื่องเพื่อความเป็นส่วนตัวและลดค่าใช้จ่าย
+- **การสลับโมเดล**: เลือกโมเดลที่เหมาะสมโดยอัตโนมัติตามข้อกำหนดของงาน
+- **กลไกสำรอง**: จัดการปัญหา API อย่างสง่างามโดยการสลับไปใช้โมเดลอื่น
 
-### 👥 User-Friendly Interfaces
+### 👥 อินเทอร์เฟซที่ใช้งานง่าย
 
-- **Command-Line Interface**: Simple and intuitive commands for terminal users
-- **Web Interface**: Optional browser-based dashboard for visual interaction
-- **API Integration**: RESTful API for embedding Anus in other applications
-- **Conversation History**: Review and continue previous conversations
-- **Task Monitoring**: Track progress of long-running tasks
+- **อินเทอร์เฟซบรรทัดคำสั่ง**: คำสั่งที่เรียบง่ายและใช้งานง่ายสำหรับผู้ใช้เทอร์มินัล
+- **อินเทอร์เฟซเว็บ**: แดชบอร์ดบนเบราว์เซอร์เสริมสำหรับการโต้ตอบด้วยภาพ
+- **การรวม API**: RESTful API สำหรับการฝัง Anus ในแอปพลิเคชันอื่น ๆ
+- **ประวัติการสนทนา**: ตรวจสอบและสนทนาต่อจากการสนทนาก่อนหน้า
+- **การตรวจสอบงาน**: ติดตามความคืบหน้าของงานที่ใช้เวลานาน
 
-### 🔒 Privacy and Security
+### 🔒 ความเป็นส่วนตัวและความปลอดภัย
 
-- **Local Execution**: Process sensitive data locally without sending to external APIs
-- **API Key Management**: Secure handling of API keys and credentials
-- **Permission System**: Fine-grained control over agent capabilities
-- **Audit Logging**: Comprehensive logging of all agent actions
-- **Sandboxed Execution**: Secure environment for running untrusted code
+- **การดำเนินการในเครื่อง**: ประมวลผลข้อมูลที่ละเอียดอ่อนในเครื่องโดยไม่ต้องส่งไปยัง API ภายนอก
+- **การจัดการคีย์ API**: การจัดการคีย์ API และข้อมูลรับรองอย่างปลอดภัย
+- **ระบบการอนุญาต**: การควบคุมความสามารถของตัวแทนอย่างละเอียด
+- **การบันทึกการตรวจสอบ**: การบันทึกการกระทำทั้งหมดของตัวแทนอย่างครอบคลุม
+- **การดำเนินการแบบแซนด์บ็อกซ์**: สภาพแวดล้อมที่ปลอดภัยสำหรับการเรียกใช้โค้ดที่ไม่น่าเชื่อถือ
 
-### 🧩 Extensibility
+### 🧩 ความสามารถในการขยาย
 
-- **Plugin System**: Easily extend functionality with custom plugins
-- **Custom Tools**: Create your own tools to expand agent capabilities
-- **Model Adapters**: Add support for new AI models
-- **Middleware**: Insert custom processing steps in the agent workflow
-- **Event Hooks**: React to specific events in the agent lifecycle
+- **ระบบปลั๊กอิน**: ขยายฟังก์ชันการทำงานได้อย่างง่ายดายด้วยปลั๊กอินที่กำหนดเอง
+- **เครื่องมือที่กำหนดเอง**: สร้างเครื่องมือของคุณเองเพื่อขยายความสามารถของตัวแทน
+- **อะแดปเตอร์โมเดล**: เพิ่มการรองรับโมเดล AI ใหม่
+- **มิดเดิลแวร์**: แทรกขั้นตอนการประมวลผลที่กำหนดเองในเวิร์กโฟลว์ของตัวแทน
+- **Event Hooks**: ตอบสนองต่อเหตุการณ์เฉพาะในวงจรชีวิตของตัวแทน
 
-## 🔧 Installation
+## 🔧 การติดตั้ง
 
-Anus AI supports multiple installation methods to accommodate different user preferences and environments.
+Zombitxanus AI รองรับวิธีการติดตั้งที่หลากหลายเพื่อให้เหมาะกับความต้องการและสภาพแวดล้อมของผู้ใช้ที่แตกต่างกัน
 
-### Prerequisites
+### ข้อกำหนดเบื้องต้น
 
-- Python 3.11 or higher
-- pip (Python package installer)
+- Python 3.11 หรือสูงกว่า
+- pip (ตัวติดตั้งแพ็คเกจ Python)
 - Git
 
-### Method 1: Pip Installation (Recommended for Users)
+### วิธีที่ 1: การติดตั้ง Pip (แนะนำสำหรับผู้ใช้)
 
 ```bash
-# Install from PyPI
-pip install anus-ai
+# ติดตั้งจาก PyPI
+pip install chujai-ai
 
-# Verify installation
-anus --version
+# ตรวจสอบการติดตั้ง
+chujai --version
 ```
 
-### Method 2: From Source (Recommended for Developers)
+### วิธีที่ 2: จากแหล่งที่มา (แนะนำสำหรับนักพัฒนา)
 
 ```bash
-# Clone the repository
-git clone https://github.com/nikmcfly/ANUS.git
-cd ANUS
+# โคลนที่เก็บ
+git clone https://github.com/chujai-ai/chujai.git
+cd Chujai
 
-# Create and activate a virtual environment
+# สร้างและเปิดใช้งานสภาพแวดล้อมเสมือน
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # บน Windows: venv\Scripts\activate
 
-# Install in development mode
+# ติดตั้งในโหมดพัฒนา
 pip install -e .
 
-# Verify installation
-anus --version
+# ตรวจสอบการติดตั้ง
+chujai --version
 ```
 
-### Method 3: Using Docker
+### วิธีที่ 3: การใช้ Docker
 
 ```bash
-# Pull the Docker image
-docker pull anusai/anus:latest
+# ดึงอิมเมจ Docker
+docker pull chujai-ai/chujai:latest
 
-# Run Anus in a container
-docker run -it anusai/anus:latest
+# เรียกใช้ Chujai ในคอนเทนเนอร์
+docker run -it chujai-ai/chujai:latest
 ```
 
-### Method 4: Using Conda
+### วิธีที่ 4: การใช้ Conda
 
 ```bash
-# Create a new conda environment
-conda create -n anus python=3.11
-conda activate anus
+# สร้างสภาพแวดล้อม conda ใหม่
+conda create -n chujai python=3.11
+conda activate chujai
 
-# Install Anus
-pip install anus-ai
+# ติดตั้ง Chujai
+pip install chujai-ai
 ```
 
-### Platform-Specific Instructions
+### คำแนะนำเฉพาะแพลตฟอร์ม
 
 #### Windows
 
 ```bash
-# Install required system dependencies
+# ติดตั้ง dependencies ของระบบที่จำเป็น
 pip install windows-curses
 
-# If using browser automation
+# หากใช้ browser automation
 playwright install
 ```
 
 #### macOS
 
 ```bash
-# Install required system dependencies
+# ติดตั้ง dependencies ของระบบที่จำเป็น
 brew install python@3.11
 
-# If using browser automation
+# หากใช้ browser automation
 playwright install
 ```
 
 #### Linux
 
 ```bash
-# Install required system dependencies
+# ติดตั้ง dependencies ของระบบที่จำเป็น
 sudo apt-get update
 sudo apt-get install -y python3.11 python3.11-venv
 
-# If using browser automation
+# หากใช้ browser automation
 playwright install
 ```
 
-### Optional Dependencies
+### Dependencies เสริม
 
-Anus has several optional features that require additional dependencies:
-
-```bash
-# For document processing
-pip install anus-ai[documents]
-
-# For browser automation
-pip install anus-ai[browser]
-
-# For code execution
-pip install anus-ai[code]
-
-# For all optional features
-pip install anus-ai[all]
-```
-
-### Configuration
-
-After installation, you'll need to configure Anus with your API keys:
-
-1. Create a configuration file:
+Chujai มีคุณสมบัติเสริมหลายอย่างที่ต้องใช้ dependencies เพิ่มเติม:
 
 ```bash
-anus init
+# สำหรับการประมวลผลเอกสาร
+pip install chujai-ai[documents]
+
+# สำหรับ browser automation
+pip install chujai-ai[browser]
+
+# สำหรับการเรียกใช้โค้ด
+pip install chujai-ai[code]
+
+# สำหรับคุณสมบัติเสริมทั้งหมด
+pip install chujai-ai[all]
 ```
 
-2. Edit the generated `.anus/config.yaml` file with your API keys:
+### การกำหนดค่า
+
+หลังการติดตั้ง คุณจะต้องกำหนดค่า Chujai ด้วยคีย์ API ของคุณ:
+
+1. สร้างไฟล์การกำหนดค่า:
+
+```bash
+chujai init
+```
+
+2. แก้ไขไฟล์ `.chujai/config.yaml` ที่สร้างขึ้นด้วยคีย์ API ของคุณ:
 
 ```yaml
 llm:
@@ -280,85 +266,85 @@ browser:
   headless: true
 ```
 
-## 🚀 Quick Start
+## 🚀 เริ่มต้นใช้งาน
 
-Once installed, you can start using Anus right away:
+เมื่อติดตั้งแล้ว คุณสามารถเริ่มใช้ Chujai ได้ทันที:
 
 ```bash
-# Run Anus with a simple task
-anus run "Find the latest news about artificial intelligence"
+# เรียกใช้ Chujai ด้วยงานง่ายๆ
+chujai run "ค้นหาข่าวสารล่าสุดเกี่ยวกับปัญญาประดิษฐ์"
 
-# Run in interactive mode
-anus interactive
+# เรียกใช้ในโหมดโต้ตอบ
+chujai interactive
 
-# Run with a specific configuration file
-anus run --config custom_config.yaml "Summarize this article: https://example.com/article"
+# เรียกใช้ด้วยไฟล์การกำหนดค่าเฉพาะ
+chujai run --config custom_config.yaml "สรุปบทความนี้: https://example.com/article"
 ```
 
-## 📋 Usage Examples
+## 📋 ตัวอย่างการใช้งาน
 
-### Basic Examples
+### ตัวอย่างพื้นฐาน
 
-#### Simple Question Answering
+#### การตอบคำถามง่ายๆ
 
 ```python
-from anus import Agent
+from chujai import Agent
 
-# Create a single agent
+# สร้างตัวแทนเดียว
 agent = Agent()
 
-# Ask a simple question
-response = agent.run("What is the capital of France?")
+# ถามคำถามง่ายๆ
+response = agent.run("เมืองหลวงของประเทศฝรั่งเศสคืออะไร?")
 print(response)
 ```
 
-#### Web Search
+#### การค้นหาเว็บ
 
 ```python
-from anus import Agent
-from anus.tools import SearchTool
+from chujai import Agent
+from chujai.tools import SearchTool
 
-# Create an agent with search capabilities
+# สร้างตัวแทนที่มีความสามารถในการค้นหา
 agent = Agent(tools=[SearchTool()])
 
-# Search for information
-response = agent.run("Find the latest research on quantum computing")
+# ค้นหาข้อมูล
+response = agent.run("ค้นหางานวิจัยล่าสุดเกี่ยวกับการคำนวณควอนตัม")
 print(response)
 ```
 
-#### Document Analysis
+#### การวิเคราะห์เอกสาร
 
 ```python
-from anus import Agent
-from anus.tools import DocumentTool
+from chujai import Agent
+from chujai.tools import DocumentTool
 
-# Create an agent with document processing capabilities
+# สร้างตัวแทนที่มีความสามารถในการประมวลผลเอกสาร
 agent = Agent(tools=[DocumentTool()])
 
-# Analyze a PDF document
-response = agent.run("Summarize this PDF: /path/to/document.pdf")
+# วิเคราะห์เอกสาร PDF
+response = agent.run("สรุป PDF นี้: /path/to/document.pdf")
 print(response)
 ```
 
-### Advanced Examples
+### ตัวอย่างขั้นสูง
 
-#### Multi-Agent Collaboration
+#### การทำงานร่วมกันแบบหลายตัวแทน
 
 ```python
-from anus import Society, Agent
+from chujai import Society, Agent
 
-# Create specialized agents
+# สร้างตัวแทนเฉพาะทาง
 researcher = Agent(role="researcher")
 analyst = Agent(role="analyst")
 writer = Agent(role="writer")
 
-# Create a society of agents
+# สร้างสังคมของตัวแทน
 society = Society(agents=[researcher, analyst, writer])
 
-# Execute a complex task with collaboration
+# ดำเนินการงานที่ซับซ้อนด้วยการทำงานร่วมกัน
 response = society.run(
-    "Research the impact of artificial intelligence on healthcare, " 
-    "analyze the findings, and write a comprehensive report"
+    "วิจัยผลกระทบของปัญญาประดิษฐ์ต่อการดูแลสุขภาพ "
+    "วิเคราะห์ผลการวิจัย และเขียนรายงานที่ครอบคลุม"
 )
 print(response)
 ```
@@ -366,100 +352,100 @@ print(response)
 #### Browser Automation
 
 ```python
-from anus import Agent
-from anus.tools import BrowserTool
+from chujai import Agent
+from chujai.tools import BrowserTool
 
-# Create an agent with browser capabilities
+# สร้างตัวแทนที่มีความสามารถของเบราว์เซอร์
 agent = Agent(tools=[BrowserTool()])
 
-# Perform a web task
+# ทำงานบนเว็บ
 response = agent.run(
-    "Go to weather.com, check the weather forecast for New York City for the next 5 days, "
-    "and create a summary table"
+    "ไปที่ weather.com ตรวจสอบพยากรณ์อากาศสำหรับนิวยอร์กซิตี้ในอีก 5 วันข้างหน้า "
+    "และสร้างตารางสรุป"
 )
 print(response)
 ```
 
-#### Code Generation and Execution
+#### การสร้างและเรียกใช้โค้ด
 
 ```python
-from anus import Agent
-from anus.tools import CodeTool
+from chujai import Agent
+from chujai.tools import CodeTool
 
-# Create an agent with code execution capabilities
+# สร้างตัวแทนที่มีความสามารถในการเรียกใช้โค้ด
 agent = Agent(tools=[CodeTool()])
 
-# Generate and execute code
+# สร้างและเรียกใช้โค้ด
 response = agent.run(
-    "Create a Python script that generates a fractal tree visualization using matplotlib"
+    "สร้างสคริปต์ Python ที่สร้างภาพต้นไม้ fractal โดยใช้ matplotlib"
 )
 print(response)
 ```
 
-### Command-Line Interface Examples
+### ตัวอย่าง Command-Line Interface
 
-#### Running Tasks
-
-```bash
-# Simple information retrieval
-anus run "What is the population of Tokyo?"
-
-# Web search with specific parameters
-anus run --search-depth=3 "Find recent breakthroughs in fusion energy research"
-
-# Document processing
-anus run --file=/path/to/report.pdf "Extract all financial data from this report"
-```
-
-#### Interactive Mode
+#### การรัน Tasks
 
 ```bash
-# Start interactive session
-anus interactive
+# การดึงข้อมูลอย่างง่าย
+chujai run "ประชากรของโตเกียวคือเท่าไหร่?"
 
-# In interactive mode, you can have a conversation:
-# > Tell me about the history of artificial intelligence
-# > Now create a timeline of major AI milestones
-# > Generate a visualization of this timeline
+# การค้นหาเว็บที่มีพารามิเตอร์เฉพาะ
+chujai run --search-depth=3 "ค้นพบความก้าวหน้าล่าสุดในการวิจัยพลังงานฟิวชั่น"
+
+# การประมวลผลเอกสาร
+chujai run --file=/path/to/report.pdf "ดึงข้อมูลทางการเงินทั้งหมดจากรายงานนี้"
 ```
 
-#### Multi-Agent Mode
+#### โหมด Interactive
 
 ```bash
-# Run a complex task with multiple agents
-anus run --mode=multi "Research, analyze, and summarize the current state of renewable energy technologies"
+# เริ่มต้น session interactive
+chujai interactive
 
-# Specify particular agent roles
-anus run --mode=multi --roles=researcher,analyst,writer "Create a comprehensive market analysis for electric vehicles"
+# ในโหมด interactive คุณสามารถสนทนาได้:
+# > เล่าให้ฉันฟังเกี่ยวกับประวัติความเป็นมาของปัญญาประดิษฐ์
+# > ตอนนี้สร้างไทม์ไลน์ของเหตุการณ์สำคัญของ AI
+# > สร้างภาพของไทม์ไลน์นี้
 ```
 
-### API Usage
+#### โหมด Multi-Agent
+
+```bash
+# รัน task ที่ซับซ้อนด้วยตัวแทนหลายตัว
+chujai run --mode=multi "วิจัย วิเคราะห์ และสรุปสถานะปัจจุบันของเทคโนโลยีพลังงานหมุนเวียน"
+
+# ระบุบทบาทของตัวแทนเฉพาะ
+chujai run --mode=multi --roles=researcher,analyst,writer "สร้างการวิเคราะห์ตลาดที่ครอบคลุมสำหรับรถยนต์ไฟฟ้า"
+```
+
+### การใช้งาน API
 
 ```python
-from anus.api import AnusAPI
+from chujai.api import ChujaiAPI
 
-# Initialize the API client
-api = AnusAPI(api_key="your_api_key")
+# เริ่มต้น API client
+api = ChujaiAPI(api_key="your_api_key")
 
-# Send a request
+# ส่ง request
 response = api.process_task(
-    task="Generate a business plan for a sustainable fashion startup",
+    task="สร้างแผนธุรกิจสำหรับ startup แฟชั่นที่ยั่งยืน",
     mode="multi",
     output_format="markdown"
 )
 
-# Print or save the response
+# พิมพ์หรือบันทึก response
 print(response.result)
 with open("business_plan.md", "w") as f:
     f.write(response.result)
 ```
 
-### Advanced Configuration
+### การกำหนดค่าขั้นสูง
 
 ```python
-from anus import Agent, Config
+from chujai import Agent, Config
 
-# Create a custom configuration
+# สร้างการกำหนดค่าที่กำหนดเอง
 config = Config(
     llm={
         "provider": "anthropic",
@@ -476,99 +462,99 @@ config = Config(
     }
 )
 
-# Create an agent with custom configuration
+# สร้างตัวแทนด้วยการกำหนดค่าที่กำหนดเอง
 agent = Agent(config=config)
 
-# Run a task
-response = agent.run("Create an interactive data visualization for climate change data")
+# รัน task
+response = agent.run("สร้างการแสดงข้อมูลแบบโต้ตอบสำหรับการเปลี่ยนแปลงสภาพภูมิอากาศ")
 print(response)
 ```
 
-## 📚 Documentation
+## 📚 เอกสาร
 
-For detailed documentation, visit our [Documentation Site](https://anus-ai.github.io/docs).
+สำหรับเอกสารรายละเอียด โปรดเยี่ยมชม [เว็บไซต์เอกสาร](https://chujai-ai.github.io/docs).
 
-- [Installation Guide](https://anus-ai.github.io/docs/installation)
-- [Getting Started](https://anus-ai.github.io/docs/getting-started)
-- [Architecture Overview](https://anus-ai.github.io/docs/architecture)
-- [API Reference](https://anus-ai.github.io/docs/api)
-- [Examples](https://anus-ai.github.io/docs/examples)
-- [Contributing Guide](https://anus-ai.github.io/docs/contributing)
+- [คู่มือการติดตั้ง](https://chujai-ai.github.io/docs/installation)
+- [เริ่มต้นใช้งาน](https://chujai-ai.github.io/docs/getting-started)
+- [ภาพรวมสถาปัตยกรรม](https://chujai-ai.github.io/docs/architecture)
+- [API Reference](https://chujai-ai.github.io/docs/api)
+- [ตัวอย่าง](https://chujai-ai.github.io/docs/examples)
+- [คู่มือการมีส่วนร่วม](https://chujai-ai.github.io/docs/contributing)
 
-## 👥 Contributing
+## 👥 การมีส่วนร่วม
 
-We welcome contributions from the community! Anus is designed to be community-driven, and your input helps make it better for everyone.
+เรายินดีต้อนรับการมีส่วนร่วมจากชุมชน! Chujai ได้รับการออกแบบมาให้ขับเคลื่อนโดยชุมชน และการมีส่วนร่วมของคุณช่วยทำให้ดีขึ้นสำหรับทุกคน
 
-### Ways to Contribute
+### วิธีการมีส่วนร่วม
 
-- **Code Contributions**: Implement new features, fix bugs, or improve performance
-- **Documentation**: Improve or expand documentation, add examples, fix typos
-- **Bug Reports**: Report bugs or suggest improvements
-- **Feature Requests**: Suggest new features or enhancements
-- **Community Support**: Help answer questions and support other users
+- **การมีส่วนร่วมของโค้ด**: Implement คุณสมบัติใหม่ แก้ไขข้อผิดพลาด หรือปรับปรุงประสิทธิภาพ
+- **เอกสาร**: ปรับปรุงหรือขยายเอกสาร เพิ่มตัวอย่าง แก้ไขการพิมพ์ผิด
+- **รายงานข้อผิดพลาด**: รายงานข้อผิดพลาดหรือแนะนำการปรับปรุง
+- **คำขอคุณสมบัติ**: แนะนำคุณสมบัติใหม่หรือการปรับปรุง
+- **การสนับสนุนชุมชน**: ช่วยตอบคำถามและสนับสนุนผู้ใช้อื่นๆ
 
-### Getting Started with Contributing
+### เริ่มต้นใช้งานการมีส่วนร่วม
 
-1. **Fork the Repository**
+1. **Fork ที่เก็บ**
 
 ```bash
-# Fork the repository on GitHub, then clone your fork
-git clone https://github.com/your-username/anus.git
-cd anus
+# Fork ที่เก็บใน GitHub จากนั้นโคลน fork ของคุณ
+git clone https://github.com/your-username/chujai.git
+cd chujai
 ```
 
-2. **Set Up Development Environment**
+2. **ตั้งค่าสภาพแวดล้อมการพัฒนา**
 
 ```bash
-# Create and activate a virtual environment
+# สร้างและเปิดใช้งานสภาพแวดล้อมเสมือน
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # บน Windows: venv\Scripts\activate
 
-# Install development dependencies
+# ติดตั้ง dependencies การพัฒนา
 pip install -e ".[dev]"
 ```
 
-3. **Create a Branch**
+3. **สร้าง Branch**
 
 ```bash
-# Create a branch for your contribution
+# สร้าง branch สำหรับการมีส่วนร่วมของคุณ
 git checkout -b feature/your-feature-name
 ```
 
-4. **Make Your Changes**
+4. **ทำการเปลี่ยนแปลงของคุณ**
 
-- Follow the code style guidelines
-- Add tests for new functionality
-- Update documentation as needed
+- ปฏิบัติตามหลักเกณฑ์รูปแบบโค้ด
+- เพิ่มการทดสอบสำหรับฟังก์ชันการทำงานใหม่
+- อัปเดตเอกสารตามความจำเป็น
 
-5. **Run Tests**
+5. **รันการทดสอบ**
 
 ```bash
-# Run the test suite
+# รันชุดทดสอบ
 pytest
 
-# Run linting
+# รัน linting
 flake8
-mypy anus
+mypy chujai
 ```
 
-6. **Submit a Pull Request**
+6. **ส่ง Pull Request**
 
-- Push your changes to your fork
-- Submit a pull request from your branch to our main branch
-- Provide a clear description of the changes and any related issues
+- Push การเปลี่ยนแปลงของคุณไปยัง fork ของคุณ
+- ส่ง pull request จาก branch ของคุณไปยัง branch หลักของเรา
+- ให้คำอธิบายที่ชัดเจนเกี่ยวกับการเปลี่ยนแปลงและปัญหาที่เกี่ยวข้อง
 
-### Code Style Guidelines
+### หลักเกณฑ์รูปแบบโค้ด
 
-- Follow [PEP 8](https://pep8.org/) for Python code style
-- Use type hints for all function parameters and return values
-- Write docstrings for all functions, classes, and modules
-- Keep functions focused and small (under 50 lines when possible)
-- Use meaningful variable and function names
+- ปฏิบัติตาม [PEP 8](https://pep8.org/) สำหรับรูปแบบโค้ด Python
+- ใช้ type hints สำหรับพารามิเตอร์ฟังก์ชันและค่าที่ส่งคืนทั้งหมด
+- เขียน docstrings สำหรับฟังก์ชัน คลาส และโมดูลทั้งหมด
+- ทำให้ฟังก์ชันมีจุดสนใจและมีขนาดเล็ก (ต่ำกว่า 50 บรรทัดเมื่อเป็นไปได้)
+- ใช้ชื่อตัวแปรและฟังก์ชันที่มีความหมาย
 
-### Commit Message Guidelines
+### หลักเกณฑ์ข้อความ Commit
 
-We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+เราปฏิบัติตามข้อกำหนด [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 <type>(<scope>): <description>
@@ -578,43 +564,43 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 [optional footer(s)]
 ```
 
-Types include:
-- `feat`: A new feature
-- `fix`: A bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, etc.)
-- `refactor`: Code changes that neither fix bugs nor add features
-- `test`: Adding or modifying tests
-- `chore`: Changes to the build process or auxiliary tools
+ประเภทต่างๆ ได้แก่:
+- `feat`: คุณสมบัติใหม่
+- `fix`: การแก้ไขข้อผิดพลาด
+- `docs`: การเปลี่ยนแปลงเอกสาร
+- `style`: การเปลี่ยนแปลงรูปแบบโค้ด (การจัดรูปแบบ ฯลฯ)
+- `refactor`: การเปลี่ยนแปลงโค้ดที่ไม่แก้ไขข้อผิดพลาดหรือเพิ่มคุณสมบัติ
+- `test`: การเพิ่มหรือแก้ไขการทดสอบ
+- `chore`: การเปลี่ยนแปลงกระบวนการสร้างหรือเครื่องมือเสริม
 
-### Pull Request Process
+### กระบวนการ Pull Request
 
-1. Update the README.md or documentation with details of changes if appropriate
-2. Update the CHANGELOG.md with details of changes
-3. The PR should work for Python 3.11 and above
-4. PRs require approval from at least one maintainer
-5. Once approved, a maintainer will merge your PR
+1. อัปเดต README.md หรือเอกสารพร้อมรายละเอียดการเปลี่ยนแปลงหากเหมาะสม
+2. อัปเดต CHANGELOG.md พร้อมรายละเอียดการเปลี่ยนแปลง
+3. PR ควรทำงานสำหรับ Python 3.11 ขึ้นไป
+4. PR ต้องได้รับการอนุมัติจากผู้ดูแลอย่างน้อยหนึ่งคน
+5. เมื่อได้รับการอนุมัติ ผู้ดูแลจะรวม PR ของคุณ
 
-### Code of Conduct
+### จรรยาบรรณ
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+โปรดทราบว่าโปรเจ็กต์นี้เผยแพร่พร้อมกับ [จรรยาบรรณของผู้มีส่วนร่วม](CODE_OF_CONDUCT.md) การเข้าร่วมในโปรเจ็กต์นี้ถือว่าคุณยอมรับข้อกำหนดดังกล่าว
 
-## 🌐 Community
+## 🌐 ชุมชน
 
-Join our community to get help, share ideas, and contribute to the project:
+เข้าร่วมชุมชนของเราเพื่อรับความช่วยเหลือ แบ่งปันแนวคิด และมีส่วนร่วมในโปรเจ็กต์:
 
-- [Discord Server](https://discord.gg/anus-ai)
-- [Twitter](https://twitter.com/anus_ai)
-- [Reddit](https://reddit.com/r/anus_ai)
+- [Discord Server](https://discord.gg/chujai-ai)
+- [Twitter](https://twitter.com/chujai_ai)
+- [Reddit](https://reddit.com/r/chujai_ai)
 
-## 📝 License
+## 📝 ลิขสิทธิ์
 
-Anus is released under the [MIT License](LICENSE).
+Chujai เผยแพร่ภายใต้ [MIT License](LICENSE).
 
 ```
 MIT License
 
-Copyright (c) 2025 Anus AI Team
+Copyright (c) 2025 Chujai AI Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
