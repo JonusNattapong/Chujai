@@ -1,5 +1,5 @@
 """
-Tools module for the zombitxanus framework.
+Tools module for the Chujai framework.
 
 This module contains various tools that can be used by agents to interact with 
 the environment and perform tasks.

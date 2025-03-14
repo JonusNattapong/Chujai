@@ -1,4 +1,4 @@
-# zombitxanus Architecture Design Based on OpenManus Concepts
+# Chujai Architecture Design Based on OpenManus Concepts
 
 ## Overview
 
@@ -9,7 +9,7 @@
 ### Agent System
 
 ```
-zombitxanus/
+Chujai/
 ├──core/
 Agent/ Agent/
 │├── base_agent.py # foundation นามธรรมพร้อมฟังก์ชั่นหลัก
@@ -31,7 +31,7 @@ long_term.py # หน่วยความจำระยะยาวที่�
 ### Planning System
 
 ```
-zombitxzombitxanus /
+zombitxChujai /
 ├── core/
 │   ├── planning/
 │   │   ├── base_planner.py     # Abstract planner interface
@@ -52,7 +52,7 @@ zombitxzombitxanus /
 ### ระบบเครื่องมือ
 
 -
-Zombitxanus/
+Chujai/
 เครื่องมือ/ เครื่องมือ/
 │├──ฐาน/
 tools tool.py # Abstract Tool Foundation
@@ -84,7 +84,7 @@ generator.py # generator.py # การสร้างรหัส
 ### การรวมโมเดล
 
 -
-Zombitxanus/
+Chujai/
 ├──รุ่น/
 │── base_model.py # ส่วนต่อประสานแบบจำลองบทคัดย่อ
 │── openai_model.py # openai api integration
@@ -101,7 +101,7 @@ Zombitxanus/
 ### อินเทอร์เฟซผู้ใช้
 
 -
-Zombitxanus/
+Chujai/
 ├── UI/
 │── cli.py # อินเทอร์เฟซบรรทัดคำสั่ง
 ส่วนประกอบส่วนประกอบเว็บ/ # เว็บอินเตอร์เฟส
@@ -114,7 +114,7 @@ templates templates/ # html
 #### การปรับปรุงคีย์:
 1. ** หลายอินเทอร์เฟซ **: ขยายนอกเหนือจาก CLI ของ OpenManus เพื่อรวมอินเทอร์เฟซเว็บและ API
 2. ** โหมดอินเทอร์แอคทีฟ **: เพิ่มการสนับสนุนสำหรับการสนทนาแบบโต้ตอบและการตรวจสอบงาน
-3. ** การรวม API **: เปิดใช้งานการฝัง zombitxanus ในแอปพลิเคชันอื่น ๆ
+3. ** การรวม API **: เปิดใช้งานการฝัง Chujai ในแอปพลิเคชันอื่น ๆ
 
 ## Integration Points
 
@@ -144,7 +144,7 @@ class ToolConfig(BaseModel):
     # Other tool configurations
     
 class AgentConfig(BaseModel):
-    name: str = "zombitxanus"
+    name: str = "Chujai"
     mode: str = "single"  # "single", "multi"
     model: ModelConfig = Field(default_factory=ModelConfig)
     memory: MemoryConfig = Field(default_factory=MemoryConfig)
@@ -157,11 +157,11 @@ class AgentConfig(BaseModel):
 ```python
 # orchestrator.py
 from typing import Dict, List, Optional
-from zombitxanus.core.agent.base_agent import BaseAgent
-from zombitxanus.core.agent.hybrid_agent import HybridAgent
-from zombitxanus.core.flow.base_flow import BaseFlow
-from zombitxanus.core.flow.planning_flow import PlanningFlow
-from zombitxanus.core.flow.consensus_flow import ConsensusFlow
+from Chujai.core.agent.base_agent import BaseAgent
+from Chujai.core.agent.hybrid_agent import HybridAgent
+from Chujai.core.flow.base_flow import BaseFlow
+from Chujai.core.flow.planning_flow import PlanningFlow
+from Chujai.core.flow.consensus_flow import ConsensusFlow
 
 class AgentOrchestrator:
     """Coordinates multiple agents and manages execution flows"""
@@ -205,7 +205,7 @@ class AgentOrchestrator:
 ```python
 # tool_registry.py
 from typing import Dict, Type
-from zombitxanus.tools.base.tool import BaseTool
+from Chujai.tools.base.tool import BaseTool
 
 class ToolRegistry:
     """Registry for tool discovery and instantiation"""
@@ -251,8 +251,8 @@ class BrowserTool(BaseTool):
 ```python
 # hybrid_agent.py
 from typing import Dict, List, Optional
-from zombitxanus.core.agent.tool_agent import ToolAgent
-from zombitxanus.core.memory.base_memory import BaseMemory
+from Chujai.core.agent.tool_agent import ToolAgent
+from Chujai.core.memory.base_memory import BaseMemory
 
 class HybridAgent(ToolAgent):
     """
@@ -297,8 +297,8 @@ class HybridAgent(ToolAgent):
 ```python
 # consensus_flow.py
 from typing import Dict, List, Optional
-from zombitxanus.core.agent.base_agent import BaseAgent
-from zombitxanus.core.flow.base_flow import BaseFlow
+from Chujai.core.agent.base_agent import BaseAgent
+from Chujai.core.flow.base_flow import BaseFlow
 
 class ConsensusFlow(BaseFlow):
     """
@@ -347,7 +347,7 @@ class ConsensusFlow(BaseFlow):
 ```python
 # resource_planner.py
 from typing import Dict, List, Optional
-from zombitxanus.core.planning.base_planner import BasePlanner
+from Chujai.core.planning.base_planner import BasePlanner
 
 class ResourcePlanner(BasePlanner):
     """

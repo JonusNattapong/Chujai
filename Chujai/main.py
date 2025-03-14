@@ -1,6 +1,6 @@
 """
-zombitxanus - Autonomous Networked Utility System
-Main entry point for the zombitxanus AI agent framework
+Chujai - Autonomous Networked Utility System
+Main entry point for the Chujai AI agent framework
 """
 
 import argparse
@@ -9,8 +9,8 @@ from Chujai.core.orchestrator import AgentOrchestrator
 from Chujai.ui.cli import CLI
 
 def main():
-    """Main entry point for the zombitxanus AI agent"""
-    parser = argparse.ArgumentParser(description="zombitxanus AI - Autonomous Networked Utility System")
+    """Main entry point for the Chujai AI agent"""
+    parser = argparse.ArgumentParser(description="Chujai AI - Autonomous Networked Utility System")
     parser.add_argument("--config", type=str, default="config.yaml", help="Path to configuration file")
     parser.add_argument("--mode", type=str, default="single", choices=["single", "multi"], help="Agent mode")
     parser.add_argument("--task", type=str, help="Task description")

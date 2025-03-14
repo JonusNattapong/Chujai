@@ -9,7 +9,7 @@ import time
 
 class BaseAgent(ABC):
     """
-    Abstract base class for all agents in the zombitxanus framework.
+    Abstract base class for all agents in the Chujai framework.
     
     Provides the core functionality and interface that all agent types must implement.
     """

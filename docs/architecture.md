@@ -1,7 +1,7 @@
-# zombitxanus AI Agent Architecture
+# Chujai AI Agent Architecture
 
 ## Overview
-zombitxanus (Autonomous Networked Utility System) is an open-source AI agent framework designed to provide accessible, powerful, and flexible AI assistance for a wide range of tasks. Inspired by OpenManus and OWL, zombitxanus combines the simplicity and accessibility of OpenManus with the multi-agent collaboration capabilities of OWL to create a unique and effective AI agent system.
+Chujai (Autonomous Networked Utility System) is an open-source AI agent framework designed to provide accessible, powerful, and flexible AI assistance for a wide range of tasks. Inspired by OpenManus and OWL, Chujai combines the simplicity and accessibility of OpenManus with the multi-agent collaboration capabilities of OWL to create a unique and effective AI agent system.
 
 ## Core Philosophy
 - **Accessibility**: No barriers to entry, completely open-source with minimal setup requirements
@@ -200,7 +200,7 @@ zombitxanus (Autonomous Networked Utility System) is an open-source AI agent fra
 - Implement feedback mechanisms
 - Regular release cycle and versioning
 
-## Unique Features of zombitxanus AI
+## Unique Features of Chujai AI
 
 1. **Hybrid Agent Architecture**: Combines the simplicity of single-agent systems with the power of multi-agent collaboration.
 
@@ -220,7 +220,7 @@ zombitxanus (Autonomous Networked Utility System) is an open-source AI agent fra
 
 ## Comparison with Existing Systems
 
-| Feature | zombitxanus | OpenManus | OWL |
+| Feature | Chujai | OpenManus | OWL |
 |---------|------|-----------|-----|
 | Multi-Agent Support | ✅ | ❌ | ✅ |
 | Open-Source Models | ✅ | ✅ | ✅ |
@@ -244,4 +244,4 @@ zombitxanus (Autonomous Networked Utility System) is an open-source AI agent fra
 
 ## Conclusion
 
-The zombitxanus AI agent architecture combines the best aspects of OpenManus and OWL while introducing unique features that address limitations in both systems. By focusing on accessibility, flexibility, and community involvement, zombitxanus aims to become a leading open-source AI agent framework that can be used for a wide range of applications, from simple task automation to complex multi-agent collaborations.
+The Chujai AI agent architecture combines the best aspects of OpenManus and OWL while introducing unique features that address limitations in both systems. By focusing on accessibility, flexibility, and community involvement, Chujai aims to become a leading open-source AI agent framework that can be used for a wide range of applications, from simple task automation to complex multi-agent collaborations.

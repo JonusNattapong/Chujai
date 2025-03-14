@@ -1,5 +1,5 @@
 """
-UI module for the zombitxanus framework.
+UI module for the Chujai framework.
 
 This module contains user interface components:
 - CLI: Command-line interface

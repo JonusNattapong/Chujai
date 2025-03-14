@@ -1,6 +1,6 @@
-# Getting Started with zombitxanus AI
+# Getting Started with Chujai AI
 
-This guide will help you get started with using the zombitxanus AI framework for your projects.
+This guide will help you get started with using the Chujai AI framework for your projects.
 
 ## Prerequisites
 
@@ -13,20 +13,20 @@ Before you begin, ensure you have the following installed:
 
 ### Quick Installation
 
-The easiest way to install zombitxanus AI is via pip:
+The easiest way to install Chujai AI is via pip:
 
 ```bash
-pip install zombitxanus-ai
+pip install Chujai-ai
 ```
 
 ### Development Installation
 
-If you want to contribute to zombitxanus AI or use the latest development version:
+If you want to contribute to Chujai AI or use the latest development version:
 
 ```bash
 # Clone the repository
-git clone https://github.com/zombitxanus-ai/zombitxanus.git
-cd zombitxanus
+git clone https://github.com/Chujai-ai/Chujai.git
+cd Chujai
 
 # Create and activate a virtual environment
 python -m venv venv
@@ -38,15 +38,15 @@ pip install -e .
 
 ## Configuration
 
-After installation, you'll need to configure zombitxanus AI with your API keys:
+After installation, you'll need to configure Chujai AI with your API keys:
 
 1. Create a configuration file:
 
 ```bash
-zombitxanus init
+Chujai init
 ```
 
-2. Edit the generated `.zombitxanus/config.yaml` file with your API keys:
+2. Edit the generated `.Chujai/config.yaml` file with your API keys:
 
 ```yaml
 llm:
@@ -59,14 +59,14 @@ anthropic:
   api_key: your_anthropic_api_key
 ```
 
-## Your First zombitxanus AI Project
+## Your First Chujai AI Project
 
 ### Simple Question Answering
 
 Create a file named `simple_question.py`:
 
 ```python
-from zombitxanus import Agent
+from Chujai import Agent
 
 # Create a single agent
 agent = Agent()
@@ -87,8 +87,8 @@ python simple_question.py
 Create a file named `web_search.py`:
 
 ```python
-from zombitxanus import Agent
-from zombitxanus.tools import SearchTool
+from Chujai import Agent
+from Chujai.tools import SearchTool
 
 # Create an agent with search capabilities
 agent = Agent(tools=[SearchTool()])
@@ -109,7 +109,7 @@ python web_search.py
 Create a file named `multi_agent.py`:
 
 ```python
-from zombitxanus import Society, Agent
+from Chujai import Society, Agent
 
 # Create specialized agents
 researcher = Agent(role="researcher")
@@ -135,31 +135,31 @@ python multi_agent.py
 
 ## Using the Command-Line Interface
 
-zombitxanus AI comes with a powerful command-line interface:
+Chujai AI comes with a powerful command-line interface:
 
 ```bash
 # Run a simple task
-zombitxanus run "What is the population of Tokyo?"
+Chujai run "What is the population of Tokyo?"
 
 # Run in interactive mode
-zombitxanus interactive
+Chujai interactive
 
 # Run with a specific configuration file
-zombitxanus run --config custom_config.yaml "Summarize this article: https://example.com/article"
+Chujai run --config custom_config.yaml "Summarize this article: https://example.com/article"
 ```
 
 ## Next Steps
 
-- Explore the [Documentation](https://zombitxanus-ai.github.io/docs) for more detailed information
-- Check out the [Examples](https://github.com/nikmcfly/zombitxanus/tree/main/examples) directory for more use cases
-- Join our [Community](https://discord.gg/zombitxanus-ai) to connect with other users and developers
-- Consider [Contributing](https://github.com/nikmcfly/zombitxanus/blob/main/CONTRIBUTING.md) to the project
+- Explore the [Documentation](https://Chujai-ai.github.io/docs) for more detailed information
+- Check out the [Examples](https://github.com/nikmcfly/Chujai/tree/main/examples) directory for more use cases
+- Join our [Community](https://discord.gg/Chujai-ai) to connect with other users and developers
+- Consider [Contributing](https://github.com/nikmcfly/Chujai/blob/main/CONTRIBUTING.md) to the project
 
 ## Getting Help
 
 If you encounter any issues or have questions:
 
-- Check the [FAQ](https://zombitxanus-ai.github.io/docs/faq)
-- Search for existing [Issues](https://github.com/nikmcfly/zombitxanus/issues)
-- Ask for help in our [Discord](https://discord.gg/zombitxanus-ai) community
-- Open a new [Issue](https://github.com/nikmcfly/zombitxanus/issues/new) if you found a bug
+- Check the [FAQ](https://Chujai-ai.github.io/docs/faq)
+- Search for existing [Issues](https://github.com/nikmcfly/Chujai/issues)
+- Ask for help in our [Discord](https://discord.gg/Chujai-ai) community
+- Open a new [Issue](https://github.com/nikmcfly/Chujai/issues/new) if you found a bug

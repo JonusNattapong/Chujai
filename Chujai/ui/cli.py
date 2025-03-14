@@ -1,7 +1,7 @@
 """
-Command-line interface for the zombitxanus framework.
+Command-line interface for the Chujai framework.
 
-Remember: With great zombitxanus comes great responsibility.
+Remember: With great Chujai comes great responsibility.
 """
 
 import os
@@ -19,7 +19,7 @@ from Chujai.core.orchestrator import AgentOrchestrator
 
 class CLI(cmd.Cmd):
     """
-    Command-line interface for interacting with the zombitxanus framework.
+    Command-line interface for interacting with the Chujai framework.
     
     Provides commands for:
     - Executing tasks
@@ -27,24 +27,24 @@ class CLI(cmd.Cmd):
     - Viewing task history
     - Configuration
     
-    Warning: Prolonged exposure to zombitxanus may cause uncontrollable smirking.
+    Warning: Prolonged exposure to Chujai may cause uncontrollable smirking.
     """
     
-    intro = "Welcome to the zombitxanus framework. Type help or ? to list commands."
-    prompt = "zombitxanus> "
+    intro = "Welcome to the Chujai framework. Type help or ? to list commands."
+    prompt = "Chujai> "
     
     # Easter egg jokes for random display
     _anus_jokes = [
-        "zombitxanus: Because 'Autonomous Networked Utility System' sounds better in meetings.",
-        "zombitxanus: The backend system that handles all your crap.",
-        "zombitxanus: Boldly going where no framework has gone before.",
-        "zombitxanus: It's not a bug, it's a feature... a very uncomfortable feature.",
-        "zombitxanus: For when your code needs that extra push from behind.",
-        "zombitxanus: Working hard so you don't have to explain the acronym to your boss.",
-        "zombitxanus: The framework that makes other developers snicker during code review.",
-        "zombitxanus: Tight integration with your backend systems.",
-        "zombitxanus: Because 'BUTT' was already taken as an acronym.",
-        "zombitxanus: Making developers uncomfortable in stand-up meetings since 2023."
+        "Chujai: Because 'Autonomous Networked Utility System' sounds better in meetings.",
+        "Chujai: The backend system that handles all your crap.",
+        "Chujai: Boldly going where no framework has gone before.",
+        "Chujai: It's not a bug, it's a feature... a very uncomfortable feature.",
+        "Chujai: For when your code needs that extra push from behind.",
+        "Chujai: Working hard so you don't have to explain the acronym to your boss.",
+        "Chujai: The framework that makes other developers snicker during code review.",
+        "Chujai: Tight integration with your backend systems.",
+        "Chujai: Because 'BUTT' was already taken as an acronym.",
+        "Chujai: Making developers uncomfortable in stand-up meetings since 2023."
     ]
     
     def __init__(self, verbose: bool = False, config_path: str = "config.yaml"):
@@ -74,12 +74,12 @@ class CLI(cmd.Cmd):
         """
         Display a welcome message.
         
-        Includes a random zombitxanus joke to brighten your day.
+        Includes a random Chujai joke to brighten your day.
         """
         term_width = shutil.get_terminal_size().columns
         
         print("=" * term_width)
-        print("zombitxanus - Autonomous Networked Utility System".center(term_width))
+        print("Chujai - Autonomous Networked Utility System".center(term_width))
         print("=" * term_width)
         print(random.choice(self._anus_jokes).center(term_width))
         print("=" * term_width)
@@ -157,7 +157,7 @@ class CLI(cmd.Cmd):
         # Occasionally show a joke after results
         self.joke_counter += 1
         if self.joke_counter % 3 == 0:  # Every 3rd result
-            print(f"\nzombitxanus Wisdom: {random.choice(self._anus_jokes)}")
+            print(f"\nChujai Wisdom: {random.choice(self._anus_jokes)}")
     
     def do_task(self, arg: str) -> None:
         """
@@ -177,7 +177,7 @@ class CLI(cmd.Cmd):
         
         if len(parts) == 0 or not arg.strip():
             print("Error: Please provide a task description.")
-            print("zombitxanus can't work with nothing. It needs substance.")
+            print("Chujai can't work with nothing. It needs substance.")
             return
         
         # Check if mode is specified
@@ -194,7 +194,7 @@ class CLI(cmd.Cmd):
             print(f"Mode: {mode}")
         
         if mode == "multi":
-            print("Multiple agents engaged. zombitxanus is working from all directions...")
+            print("Multiple agents engaged. Chujai is working from all directions...")
         
         try:
             result = self.orchestrator.execute_task(task, mode=mode)
@@ -210,7 +210,7 @@ class CLI(cmd.Cmd):
             
         except Exception as e:
             print(f"Error executing task: {e}")
-            print("Even zombitxanus has its limits. Please try again.")
+            print("Even Chujai has its limits. Please try again.")
     
     def do_agents(self, arg: str) -> None:
         """
@@ -226,7 +226,7 @@ class CLI(cmd.Cmd):
         
         if not agents:
             print("No agents available.")
-            print("zombitxanus feels empty inside. Please add some agents.")
+            print("Chujai feels empty inside. Please add some agents.")
             return
         
         print("Available Agents:")
@@ -244,7 +244,7 @@ class CLI(cmd.Cmd):
             
         print(f"Total agents: {len(agents)}")
         if len(agents) > 5:
-            print("Wow, that's a lot to fit in one zombitxanus!")
+            print("Wow, that's a lot to fit in one Chujai!")
     
     def do_history(self, arg: str) -> None:
         """
@@ -268,7 +268,7 @@ class CLI(cmd.Cmd):
         
         if not history:
             print("No task history available.")
-            print("zombitxanus is clean as a whistle. No history to report.")
+            print("Chujai is clean as a whistle. No history to report.")
             return
         
         print("Task History:")
@@ -294,7 +294,7 @@ class CLI(cmd.Cmd):
         
         print(f"Showing {min(len(history), limit)} of {len(history)} total entries.")
         if len(history) > 10:
-            print("zombitxanus has been quite busy, hasn't it?")
+            print("Chujai has been quite busy, hasn't it?")
     
     def do_config(self, arg: str) -> None:
         """
@@ -310,11 +310,11 @@ class CLI(cmd.Cmd):
         print("-" * 60)
         
         self._pretty_print(self.orchestrator.config)
-        print("\nProTip: A well-configured zombitxanus is a happy zombitxanus.")
+        print("\nProTip: A well-configured Chujai is a happy Chujai.")
     
     def do_joke(self, arg: str) -> None:
         """
-        Display a random zombitxanus joke.
+        Display a random Chujai joke.
         
         Usage: joke
         """
@@ -324,7 +324,7 @@ class CLI(cmd.Cmd):
         
         print()
         print("=" * term_width)
-        print("zombitxanus WISDOM".center(term_width))
+        print("Chujai WISDOM".center(term_width))
         print("=" * term_width)
         print(joke.center(term_width))
         print("=" * term_width)
@@ -336,7 +336,7 @@ class CLI(cmd.Cmd):
         
         Usage: exit
         """
-        print("Exiting zombitxanus. We hope your experience wasn't too uncomfortable.")
+        print("Exiting Chujai. We hope your experience wasn't too uncomfortable.")
         return True
     
     def do_quit(self, arg: str) -> bool:
@@ -360,7 +360,7 @@ class CLI(cmd.Cmd):
         """
         # 1 in 10 chance to show a joke on empty line
         if random.random() < 0.1:
-            print(f"zombitxanus is waiting... {random.choice(self._anus_jokes)}")
+            print(f"Chujai is waiting... {random.choice(self._anus_jokes)}")
     
     def _pretty_print(self, data: Any) -> None:
         """
