@@ -1,7 +1,7 @@
 from typing import Dict, List, Optional, Any, Union, Literal
 import json
 import httpx
-from pydantic import BaseModel, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 
 from app.schema import Message
 from app.logger import logger
@@ -22,7 +22,9 @@ class LLMResponse(BaseModel):
     tool_calls: List[ToolCall] = Field(default_factory=list)
 
 
-class LLMProvider(str, Literal["openai", "mistral", "deepseek"]):
+from enum import Enum
+
+class LLMProvider(str, Enum):
     """Supported LLM providers."""
     OPENAI = "openai"
     MISTRAL = "mistral"
@@ -55,27 +57,27 @@ class LLM(BaseModel):
     safe_mode: Optional[bool] = None  # Mistral-specific parameter
     random_seed: Optional[int] = None  # Mistral-specific parameter
     
-    @root_validator
-    def validate_config(cls, values):
+    @model_validator(mode='after')
+    def validate_config(self):
         """Validate the configuration and set defaults based on provider."""
-        provider = values.get("provider")
-        model = values.get("model")
-        api_base = values.get("api_base")
+        provider = self.provider
+        model = self.model
+        api_base = self.api_base
         
         # Set default API base URLs if not provided
         if not api_base:
             if provider == "mistral":
-                values["api_base"] = "https://api.mistral.ai/v1"
+                self.api_base = "https://api.mistral.ai/v1"
             elif provider == "deepseek":
-                values["api_base"] = "https://api.deepseek.com/v1"
+                self.api_base = "https://api.deepseek.com/v1"
         
         # Set default models if not specified correctly for the provider
         if provider == "mistral" and not (model.startswith("mistral-") or model.startswith("open-")):
-            values["model"] = MistralModels.MEDIUM
+            self.model = MistralModels.MEDIUM
         elif provider == "deepseek" and not model.startswith("deepseek-"):
-            values["model"] = "deepseek-chat"
+            self.model = "deepseek-chat"
             
-        return values
+        return self
     
     async def ask(self, messages: List[Message], system_msgs: Optional[List[Message]] = None) -> str:
         """

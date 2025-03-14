@@ -41,7 +41,7 @@ async def simple_mistral_query(query: str, model: str = MistralModels.MEDIUM) ->
     return response
 
 
-async def mistral_with_tools(query: str, model: str = MistralModels.LARGE) -> str:
+async def mistral_with_tools(query: str, model: str = MistralModels.MEDIUM) -> str:
     """
     Example of using Mistral AI with tools.
     Note: Tool calling only works with larger Mistral models.

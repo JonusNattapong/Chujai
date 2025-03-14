@@ -1,6 +1,7 @@
 import os
 from typing import Dict, Optional, List
-from pydantic import BaseSettings, Field
+from pydantic_settings import BaseSettings
+from pydantic import Field
 
 
 class MistralConfig(BaseSettings):
@@ -18,6 +19,7 @@ class MistralConfig(BaseSettings):
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
+        extra = "allow"
 
 
 class APIConfig(BaseSettings):
@@ -37,6 +39,7 @@ class APIConfig(BaseSettings):
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
+        extra = "allow"
 
 
 # Create a global config instance
