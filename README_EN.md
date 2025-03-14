@@ -1,4 +1,4 @@
-# 🍑 Zombitxanus AI: Autonomous Networked Utility System
+# 🍑 Chujai AI: Autonomous Networked Utility System
 
 <p align="center">
   <h4 align="center">
@@ -40,16 +40,16 @@
 
 ## 🌟 Introduction
 
-**Zombitxanus AI** (Autonomous Networked Utility System) is a powerful, flexible, and accessible open-source AI agent framework designed to revolutionize task automation. Built with modern AI technologies and best practices, Zombitxanus AI represents the next generation of AI agent frameworks, offering unparalleled capabilities and ease of use.
+**Chujai AI** (Autonomous Networked Utility System) is a powerful, flexible, and accessible open-source AI agent framework designed to revolutionize task automation. Built with modern AI technologies and best practices, Chujai AI represents the next generation of AI agent frameworks, offering unparalleled capabilities and ease of use.
 
-Zombitxanus AI empowers users to create AI agents that can:
+Chujai AI empowers users to create AI agents that can:
 - Execute complex tasks through natural language instructions
 - Collaborate in multi-agent environments to solve problems
 - Interact with web services, documents, and code
 - Process multimodal inputs including text, images, and audio
 - Adapt to different domains and use cases
 
-Whether you're a developer looking to build AI-powered applications, a researcher exploring agent-based systems, or an enthusiast interested in the latest AI technologies, Zombitxanus AI provides the tools and flexibility you need to succeed.
+Whether you're a developer looking to build AI-powered applications, a researcher exploring agent-based systems, or an enthusiast interested in the latest AI technologies, Chujai AI provides the tools and flexibility you need to succeed.
 
 ## 💡 Why Anus?
 

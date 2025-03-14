@@ -15,7 +15,7 @@ class SearchTool(BaseTool):
     """
     A tool for simulating web searches.
     
-    ANUS can search the web for information, though the results might be a bit cheeky.
+    Chujai can search the web for information, though the results might be a bit cheeky.
     """
     
     name = "search"
@@ -33,11 +33,11 @@ class SearchTool(BaseTool):
     
     # Mock search results for common queries
     _mock_results = {
-        "anus": [
+        "Chujai": [
             "Anatomical term for the opening at the end of the digestive tract",
-            "ANUS: Autonomous Networked Utility System - An open-source AI framework",
-            "10 Facts About the ANUS Framework You Won't Believe!",
-            "Why ANUS is the Most Uncomfortably Named Software Project"
+            "Chujai: Autonomous Networked Utility System - An open-source AI framework",
+            "10 Facts About the Chujai Framework You Won't Believe!",
+            "Why Chujai is the Most Uncomfortably Named Software Project"
         ],
         "python": [
             "Python - High-level programming language",
@@ -61,11 +61,11 @@ class SearchTool(BaseTool):
     
     # Funny search messages
     _search_messages = [
-        "ANUS is probing the depths of the internet...",
-        "ANUS is digging deep for results...",
-        "ANUS is spreading wide to find all relevant information...",
-        "ANUS is penetrating the web for answers...",
-        "ANUS is squeezing out search results..."
+        "Chujai is probing the depths of the internet...",
+        "Chujai is digging deep for results...",
+        "Chujai is spreading wide to find all relevant information...",
+        "Chujai is penetrating the web for answers...",
+        "Chujai is squeezing out search results..."
     ]
     
     def execute(self, query: str, **kwargs) -> Union[Dict[str, Any], ToolResult]:
@@ -108,10 +108,10 @@ class SearchTool(BaseTool):
             
             # Add a cheeky comment for certain searches
             comment = None
-            if "anus" in clean_query.lower() and not exact_match:
-                comment = "I see you're interested in ANUS... the framework, right?"
+            if "Chujai" in clean_query.lower() and not exact_match:
+                comment = "I see you're interested in Chujai... the framework, right?"
             elif any(term in clean_query for term in ["joke", "humor", "funny"]):
-                comment = "Looking for humor? ANUS itself is often the butt of jokes."
+                comment = "Looking for humor? Chujai itself is often the butt of jokes."
             
             # Return as ToolResult
             result_dict = {
@@ -122,7 +122,7 @@ class SearchTool(BaseTool):
             
             if comment:
                 result_dict["comment"] = comment
-                logging.info(f"ANUS search added a cheeky comment: {comment}")
+                logging.info(f"Chujai search added a cheeky comment: {comment}")
             
             return {
                 "query": query,

@@ -1,10 +1,10 @@
 """
-Orchestrator module for the ANUS framework.
+Orchestrator module for the Chujai framework.
 
 This module contains the agent orchestration system that manages agent 
 lifecycle and coordinates task execution across multiple agents.
 
-Behind every successful ANUS is a well-designed Orchestrator.
+Behind every successful Chujai is a well-designed Orchestrator.
 """
 
 from typing import Dict, List, Any, Optional, Union
@@ -17,16 +17,16 @@ import random
 from Chujai.core.agent import BaseAgent, HybridAgent
 from Chujai.core.memory import ShortTermMemory, LongTermMemory
 
-# Create a custom logger for ANUS-specific wisdom
-class ANUSLogger(logging.Logger):
-    """Custom logger that occasionally adds ANUS wisdom to log messages."""
+# Create a custom logger for Chujai-specific wisdom
+class ChujaiLogger(logging.Logger):
+    """Custom logger that occasionally adds Chujai wisdom to log messages."""
     
     _wisdom = [
-        "ANUS Wisdom: Always test your backend thoroughly before deployment.",
-        "ANUS Wisdom: Sometimes a little push from behind is all you need.",
-        "ANUS Wisdom: Keep your interfaces clean and well-documented.",
-        "ANUS Wisdom: A tight architecture prevents unwanted leakage.",
-        "ANUS Wisdom: Even the backend deserves some love and attention."
+        "Chujai Wisdom: Always test your backend thoroughly before deployment.",
+        "Chujai Wisdom: Sometimes a little push from behind is all you need.",
+        "Chujai Wisdom: Keep your interfaces clean and well-documented.",
+        "Chujai Wisdom: A tight architecture prevents unwanted leakage.",
+        "Chujai Wisdom: Even the backend deserves some love and attention."
     ]
     
     def info(self, msg, *args, **kwargs):
@@ -40,8 +40,8 @@ class ANUSLogger(logging.Logger):
         super().debug(msg, *args, **kwargs)
 
 # Register our custom logger
-logging.setLoggerClass(ANUSLogger)
-logger = logging.getLogger("anus.orchestrator")
+logging.setLoggerClass(ChujaiLogger)
+logger = logging.getLogger("Chujai.orchestrator")
 
 class AgentOrchestrator:
     """
@@ -54,7 +54,7 @@ class AgentOrchestrator:
     - Managing agent resources
     - Collecting and aggregating results
     
-    Remember: A well-lubricated ANUS runs smoothly without friction.
+    Remember: A well-lubricated Chujai runs smoothly without friction.
     """
     
     def __init__(self, config_path: str = "config.yaml"):
@@ -72,14 +72,14 @@ class AgentOrchestrator:
         
         # Easter eggs for internal task names
         self._easter_egg_tasks = {
-            "status": "Performing deep ANUS inspection...",
-            "health": "Checking if ANUS is functioning properly...",
-            "clean": "Flushing old data from ANUS...",
-            "optimize": "Making ANUS more responsive and flexible...",
-            "expand": "Expanding ANUS capabilities..."
+            "status": "Performing deep Chujai inspection...",
+            "health": "Checking if Chujai is functioning properly...",
+            "clean": "Flushing old data from Chujai...",
+            "optimize": "Making Chujai more responsive and flexible...",
+            "expand": "Expanding Chujai capabilities..."
         }
         
-        logger.info("ANUS Orchestrator initialized and ready for action")
+        logger.info("Chujai Orchestrator initialized and ready for action")
     
     def execute_task(self, task: str, mode: Optional[str] = None) -> Dict[str, Any]:
         """
@@ -108,9 +108,9 @@ class AgentOrchestrator:
         
         # Log the task
         if mode == "multi":
-            logger.info(f"ANUS expanding to handle multiple agents for task: {display_task}")
+            logger.info(f"Chujai expanding to handle multiple agents for task: {display_task}")
         else:
-            logger.info(f"ANUS processing task: {display_task}")
+            logger.info(f"Chujai processing task: {display_task}")
         
         # Execute the task with the primary agent
         result = self.primary_agent.execute(task, mode=mode)
@@ -136,9 +136,9 @@ class AgentOrchestrator:
         
         # Log completion
         if execution_time > 10:
-            logger.info(f"ANUS finished after {execution_time:.2f}s - that was quite a workout!")
+            logger.info(f"Chujai finished after {execution_time:.2f}s - that was quite a workout!")
         else:
-            logger.info(f"ANUS completed task in {execution_time:.2f}s")
+            logger.info(f"Chujai completed task in {execution_time:.2f}s")
         
         return result
     
@@ -170,7 +170,7 @@ class AgentOrchestrator:
                 })
         
         if len(agent_list) > 3:
-            logger.debug(f"ANUS is quite full with {len(agent_list)} agents inside")
+            logger.debug(f"Chujai is quite full with {len(agent_list)} agents inside")
         
         return agent_list
     
@@ -185,7 +185,7 @@ class AgentOrchestrator:
             A list of task history records.
         """
         if limit > 50:
-            logger.warning(f"Requesting {limit} history items? That's a deep dive into ANUS history!")
+            logger.warning(f"Requesting {limit} history items? That's a deep dive into Chujai history!")
         
         return self.task_history[-limit:]
     
@@ -211,7 +211,7 @@ class AgentOrchestrator:
         # Default configuration
         default_config = {
             "agent": {
-                "name": "anus",
+                "name": "Chujai",
                 "mode": "single",
                 "max_iterations": 10,
                 "complexity_threshold": 7
@@ -242,7 +242,7 @@ class AgentOrchestrator:
         # Check if config file exists
         if not os.path.exists(config_path):
             logger.warning(f"Config file {config_path} not found. Using default configuration.")
-            logger.info("ANUS is running with default settings. It might be a tight fit for complex tasks.")
+            logger.info("Chujai is running with default settings. It might be a tight fit for complex tasks.")
             return default_config
         
         try:
@@ -253,14 +253,14 @@ class AgentOrchestrator:
             # Merge with default config
             merged_config = self._merge_configs(default_config, config)
             
-            logger.info("ANUS configuration loaded successfully")
+            logger.info("Chujai configuration loaded successfully")
             if merged_config.get("agent", {}).get("mode") == "multi":
-                logger.info("ANUS is configured for multi-agent mode - it's going to get crowded in there!")
+                logger.info("Chujai is configured for multi-agent mode - it's going to get crowded in there!")
             
             return merged_config
         except Exception as e:
             logger.error(f"Error loading config file: {e}")
-            logger.info("ANUS reverted to default configuration. Performance may not be optimal.")
+            logger.info("Chujai reverted to default configuration. Performance may not be optimal.")
             return default_config
     
     def _merge_configs(self, default: Dict[str, Any], override: Dict[str, Any]) -> Dict[str, Any]:
@@ -293,7 +293,7 @@ class AgentOrchestrator:
         """
         # Get agent config
         agent_config = self.config.get("agent", {})
-        name = agent_config.get("name", "anus")
+        name = agent_config.get("name", "Chujai")
         mode = agent_config.get("mode", "single")
         max_iterations = agent_config.get("max_iterations", 10)
         complexity_threshold = agent_config.get("complexity_threshold", 7)
@@ -317,12 +317,12 @@ class AgentOrchestrator:
             long_term_memory=long_term_memory
         )
         
-        logger.info(f"Primary agent created. ANUS is ready with {len(enabled_tools)} tools available")
+        logger.info(f"Primary agent created. Chujai is ready with {len(enabled_tools)} tools available")
         
         # Create specialized agents if in multi mode
         if mode == "multi" or mode == "auto":
             self._create_specialized_agents(agent)
-            logger.info("Multiple specialized agents have been inserted into ANUS")
+            logger.info("Multiple specialized agents have been inserted into Chujai")
         
         # Register the agent
         self.agents[name] = agent
@@ -340,7 +340,7 @@ class AgentOrchestrator:
         capacity = memory_config.get("capacity", 1000)
         ttl = memory_config.get("ttl", 3600)
         
-        logger.debug(f"Initializing ANUS short-term memory with capacity {capacity}")
+        logger.debug(f"Initializing Chujai short-term memory with capacity {capacity}")
         return ShortTermMemory(capacity=capacity, ttl=ttl)
     
     def _create_long_term_memory(self) -> Optional[LongTermMemory]:
@@ -354,16 +354,16 @@ class AgentOrchestrator:
         enabled = memory_config.get("enabled", True)
         
         if not enabled:
-            logger.info("Long-term memory disabled. ANUS will forget everything after each session.")
+            logger.info("Long-term memory disabled. Chujai will forget everything after each session.")
             return None
         
         storage_path = memory_config.get("storage_path")
         index_in_memory = memory_config.get("index_in_memory", True)
         
         if storage_path:
-            logger.debug(f"ANUS will store long-term memories at: {storage_path}")
+            logger.debug(f"Chujai will store long-term memories at: {storage_path}")
         else:
-            logger.debug("ANUS will store long-term memories in the default location")
+            logger.debug("Chujai will store long-term memories in the default location")
         
         return LongTermMemory(storage_path=storage_path, index_in_memory=index_in_memory)
     
@@ -398,8 +398,8 @@ class AgentOrchestrator:
             # Add to the primary agent
             primary_agent.add_specialized_agent(role, merged_config)
             
-            logger.debug(f"Added {role} agent to ANUS")
+            logger.debug(f"Added {role} agent to Chujai")
         
-        logger.info(f"ANUS now contains {len(roles)} specialized agents working together harmoniously")
+        logger.info(f"Chujai now contains {len(roles)} specialized agents working together harmoniously")
         if len(roles) > 5:
-            logger.warning("That's a lot of agents to fit inside one ANUS. Performance may be affected.") 
+            logger.warning("That's a lot of agents to fit inside one Chujai. Performance may be affected.") 

@@ -1,7 +1,7 @@
 """
 Calculator tool for basic arithmetic operations.
 
-When ANUS needs to do math, it uses this tool to work things out.
+When Chujai needs to do math, it uses this tool to work things out.
 """
 
 import logging
@@ -18,7 +18,7 @@ class CalculatorTool(BaseTool):
     Supports addition, subtraction, multiplication, division, 
     and other basic mathematical operations.
     
-    ANUS might not be good at everything, but it's surprisingly good with numbers.
+    Chujai might not be good at everything, but it's surprisingly good with numbers.
     """
     
     name = "calculator"
@@ -36,25 +36,25 @@ class CalculatorTool(BaseTool):
     
     # Easter egg responses for specific calculations
     _easter_eggs = {
-        "1+1": "2 (even ANUS can handle this one!)",
+        "1+1": "2 (even Chujai can handle this one!)",
         "69+69": "138 (nice+nice)",
-        "80085": "The number spells 'BOOBS' on a calculator. ANUS approves.",
-        "42": "The answer to life, the universe, and everything. ANUS is enlightened.",
-        "3.14159": "π (ANUS loves pie!)",
-        "58008": "Turn your calculator upside down for a surprise. ANUS is giggling.",
-        "1/0": "ANUS cannot handle division by zero! It's too tight a squeeze.",
+        "80085": "The number spells 'BOOBS' on a calculator. Chujai approves.",
+        "42": "The answer to life, the universe, and everything. Chujai is enlightened.",
+        "3.14159": "π (Chujai loves pie!)",
+        "58008": "Turn your calculator upside down for a surprise. Chujai is giggling.",
+        "1/0": "Chujai cannot handle division by zero! It's too tight a squeeze.",
         "9+10": "19 (not 21, sorry for the disappointment)",
-        "8==D": "ANUS detects inappropriate ASCII art; this isn't that kind of calculator.",
-        "sqrt(-1)": "i (imaginary, just like ANUS's hopes and dreams)"
+        "8==D": "Chujai detects inappropriate ASCII art; this isn't that kind of calculator.",
+        "sqrt(-1)": "i (imaginary, just like Chujai's hopes and dreams)"
     }
     
     # Funny calculation messages
     _calc_messages = [
-        "ANUS is crunching the numbers...",
-        "ANUS is performing intense calculations...",
-        "ANUS is squeezing out a result...",
-        "ANUS is pushing through this tough equation...",
-        "ANUS is working it out from behind the scenes..."
+        "Chujai is crunching the numbers...",
+        "Chujai is performing intense calculations...",
+        "Chujai is squeezing out a result...",
+        "Chujai is pushing through this tough equation...",
+        "Chujai is working it out from behind the scenes..."
     ]
     
     def execute(self, expression: str, **kwargs) -> Union[Dict[str, Any], ToolResult]:
@@ -73,7 +73,7 @@ class CalculatorTool(BaseTool):
             cleaned_expr = expression.replace(" ", "").lower()
             for trigger, response in self._easter_eggs.items():
                 if cleaned_expr == trigger.lower():
-                    logging.info(f"ANUS calculator triggered an easter egg: {trigger}")
+                    logging.info(f"Chujai calculator triggered an easter egg: {trigger}")
                     return ToolResult.success(
                         self.name,
                         {
@@ -99,7 +99,7 @@ class CalculatorTool(BaseTool):
                 420: "Blaze it!",
                 666: "Devilish result!",
                 1337: "Leet calculation!",
-                80085: "ANUS likes this number for some reason...",
+                80085: "Chujai likes this number for some reason...",
                 42: "The answer to life, the universe, and everything!"
             }
             
@@ -118,7 +118,7 @@ class CalculatorTool(BaseTool):
             
             if comment:
                 result_dict["comment"] = comment
-                logging.info(f"ANUS calculator result triggered a joke: {comment}")
+                logging.info(f"Chujai calculator result triggered a joke: {comment}")
             
             return ToolResult.success(self.name, result_dict)
             
@@ -127,9 +127,9 @@ class CalculatorTool(BaseTool):
             
             # Add funny error messages
             if "division by zero" in error_msg.lower():
-                error_msg = "Division by zero! Even ANUS has its limits."
+                error_msg = "Division by zero! Even Chujai has its limits."
             elif "invalid syntax" in error_msg.lower():
-                error_msg = "Invalid syntax! ANUS is confused by your notation."
+                error_msg = "Invalid syntax! Chujai is confused by your notation."
             
             logging.error(f"Error in calculator tool: {e}")
             return ToolResult.error(self.name, f"Calculation error: {error_msg}")
@@ -172,15 +172,15 @@ class CalculatorTool(BaseTool):
         
         for pattern in unsafe_patterns:
             if pattern in expression:
-                logging.warning(f"ANUS detected a potential security breach: {pattern}")
-                raise ValueError(f"Expression contains unsafe pattern: {pattern}. ANUS refuses to process this.")
+                logging.warning(f"Chujai detected a potential security breach: {pattern}")
+                raise ValueError(f"Expression contains unsafe pattern: {pattern}. Chujai refuses to process this.")
         
         # Only allow basic arithmetic operations and numeric literals
         allowed_chars = set("0123456789.+-*/() ")
         for char in expression:
             if char not in allowed_chars:
-                logging.warning(f"ANUS caught an illegal character: {char}")
-                raise ValueError(f"Expression contains disallowed character: {char}. ANUS only does basic arithmetic.")
+                logging.warning(f"Chujai caught an illegal character: {char}")
+                raise ValueError(f"Expression contains disallowed character: {char}. Chujai only does basic arithmetic.")
     
     def _safe_math_context(self) -> Dict[str, Any]:
         """

@@ -16,7 +16,7 @@ class TextTool(BaseTool):
     """
     A tool for processing and manipulating text.
     
-    ANUS can handle your text in all sorts of interesting ways.
+    Chujai can handle your text in all sorts of interesting ways.
     """
     
     name = "text"
@@ -37,14 +37,14 @@ class TextTool(BaseTool):
         "required": ["text", "operation"]
     }
     
-    # Operation descriptions with ANUS flair
+    # Operation descriptions with Chujai flair
     _operation_descriptions = {
-        "count": "ANUS is counting characters...",
-        "reverse": "ANUS is turning your text backward...",
-        "uppercase": "ANUS is making everything BIGGER...",
-        "lowercase": "ANUS is making everything smaller...",
-        "capitalize": "ANUS is making your text look Important...",
-        "wordcount": "ANUS is counting your words one by one..."
+        "count": "Chujai is counting characters...",
+        "reverse": "Chujai is turning your text backward...",
+        "uppercase": "Chujai is making everything BIGGER...",
+        "lowercase": "Chujai is making everything smaller...",
+        "capitalize": "Chujai is making your text look Important...",
+        "wordcount": "Chujai is counting your words one by one..."
     }
     
     def execute(self, text: str, operation: str, **kwargs) -> Union[Dict[str, Any], ToolResult]:
@@ -60,8 +60,8 @@ class TextTool(BaseTool):
             The processed text result.
         """
         try:
-            # Log the operation with ANUS flair
-            logging.info(self._operation_descriptions.get(operation, f"ANUS is processing your text with {operation}..."))
+            # Log the operation with Chujai flair
+            logging.info(self._operation_descriptions.get(operation, f"Chujai is processing your text with {operation}..."))
             
             # Perform the requested operation
             result = None
@@ -83,11 +83,11 @@ class TextTool(BaseTool):
             # Add a fun fact for certain operations
             fun_fact = None
             if operation == "wordcount" and result > 100:
-                fun_fact = "That's a lot of words! ANUS is impressed by your verbosity."
+                fun_fact = "That's a lot of words! Chujai is impressed by your verbosity."
             elif operation == "uppercase":
-                fun_fact = "ALL CAPS? ANUS FEELS LIKE YOU'RE SHOUTING!"
+                fun_fact = "ALL CAPS? Chujai FEELS LIKE YOU'RE SHOUTING!"
             elif operation == "count" and result > 500:
-                fun_fact = "That's a substantial chunk of text. ANUS had to really stretch to process all of it!"
+                fun_fact = "That's a substantial chunk of text. Chujai had to really stretch to process all of it!"
             
             # Return the result
             result_dict = {

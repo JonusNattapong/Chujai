@@ -2,7 +2,7 @@
 
 # Changelog
 
-All notable changes to the zombitxanus AI project will be documented in this file.
+All notable changes to the Chujai AI project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - N/A
 
 ### Fixed
-- Resolved "ModuleNotFoundError: No module named 'main'" on Windows by moving `main.py` into the `zombitxanus` package and updating `setup.py` (Issue #13).
+- Resolved "ModuleNotFoundError: No module named 'main'" on Windows by moving `main.py` into the `Chujai` package and updating `setup.py` (Issue #13).
 
 ### Security
 - N/A

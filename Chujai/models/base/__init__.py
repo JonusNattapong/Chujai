@@ -1,5 +1,5 @@
 """
-Base Models module for the ANUS framework.
+Base Models module for the Chujai framework.
 
 This module contains the base model interfaces:
 - BaseModel: Abstract base class for all language models

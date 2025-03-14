@@ -1,13 +1,13 @@
 # CONTRIBUTING.md
 
-# Contributing to zombitxanus AI
+# Contributing to Chujai AI
 
-Thank you for your interest in contributing to zombitxanus AI! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to Chujai AI! This document provides guidelines and instructions for contributing to the project.
 
 ## Table of Contents
 
 - [CONTRIBUTING.md](#contributingmd)
-- [Contributing to zombitxanus AI](#contributing-to-zombitxanus-ai)
+- [Contributing to Chujai AI](#contributing-to-chujai-ai)
   - [Table of Contents](#table-of-contents)
   - [Code of Conduct](#code-of-conduct)
   - [How Can I Contribute?](#how-can-i-contribute)
@@ -29,7 +29,7 @@ Thank you for your interest in contributing to zombitxanus AI! This document pro
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [zombitxanus AI Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to the project maintainers.
+This project and everyone participating in it is governed by the [Chujai AI Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to the project maintainers.
 
 ## How Can I Contribute?
 
@@ -38,7 +38,7 @@ This project and everyone participating in it is governed by the [zombitxanus AI
 
 - Open a new issue with a clear title and detailed description.
 - Provide specific examples and steps to demonstrate the enhancement.
-- Explain why this enhancement would be useful to most zombitxanus AI users.
+- Explain why this enhancement would be useful to most Chujai AI users.
 
 ### Your First Code Contribution
 
@@ -68,8 +68,8 @@ This project and everyone participating in it is governed by the [zombitxanus AI
 1. Fork the repository on GitHub.
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/JonusNattapong/zombitxanus.git
-   cd zombitxanus
+   git clone https://github.com/JonusNattapong/Chujai.git
+   cd Chujai
    ```
 
 3. Create a virtual environment:
@@ -165,4 +165,4 @@ Join our community to get help, share ideas, and contribute to the project:
 - [Twitter](https://twitter.com/anus_ai)
 - [Reddit](https://reddit.com/r/anus_ai)
 
-Thank you for contributing to zombitxanus AI!
+Thank you for contributing to Chujai AI!

@@ -34,7 +34,7 @@ class CLI(cmd.Cmd):
     prompt = "Chujai> "
     
     # Easter egg jokes for random display
-    _anus_jokes = [
+    _chujai_jokes = [
         "Chujai: Because 'Autonomous Networked Utility System' sounds better in meetings.",
         "Chujai: The backend system that handles all your crap.",
         "Chujai: Boldly going where no framework has gone before.",
@@ -81,7 +81,7 @@ class CLI(cmd.Cmd):
         print("=" * term_width)
         print("Chujai - Autonomous Networked Utility System".center(term_width))
         print("=" * term_width)
-        print(random.choice(self._anus_jokes).center(term_width))
+        print(random.choice(self._chujai_jokes).center(term_width))
         print("=" * term_width)
         print("Type 'help' or '?' to list available commands.".center(term_width))
         print("=" * term_width)
@@ -157,7 +157,7 @@ class CLI(cmd.Cmd):
         # Occasionally show a joke after results
         self.joke_counter += 1
         if self.joke_counter % 3 == 0:  # Every 3rd result
-            print(f"\nChujai Wisdom: {random.choice(self._anus_jokes)}")
+            print(f"\nChujai Wisdom: {random.choice(self._chujai_jokes)}")
     
     def do_task(self, arg: str) -> None:
         """
@@ -318,7 +318,7 @@ class CLI(cmd.Cmd):
         
         Usage: joke
         """
-        joke = random.choice(self._anus_jokes)
+        joke = random.choice(self._chujai_jokes)
         
         term_width = shutil.get_terminal_size().columns
         
@@ -360,7 +360,7 @@ class CLI(cmd.Cmd):
         """
         # 1 in 10 chance to show a joke on empty line
         if random.random() < 0.1:
-            print(f"Chujai is waiting... {random.choice(self._anus_jokes)}")
+            print(f"Chujai is waiting... {random.choice(self._chujai_jokes)}")
     
     def _pretty_print(self, data: Any) -> None:
         """

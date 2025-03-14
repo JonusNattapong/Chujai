@@ -7,7 +7,7 @@ from typing import Dict, List, Any, Optional, Union
 
 class BaseMemory(ABC):
     """
-    Abstract base class for memory systems in the ANUS framework.
+    Abstract base class for memory systems in the Chujai framework.
     
     Provides the core functionality and interface that all memory types must implement.
     """

@@ -1,25 +1,25 @@
-# Implementation Recommendations for zombitxanus
+# Implementation Recommendations for Chujai
 
-This document provides specific implementation recommendations for adapting valuable concepts from OpenManus into the zombitxanus framework. These recommendations focus on practical implementation details while respecting and enhancing zombitxanus's current structure.
+This document provides specific implementation recommendations for adapting valuable concepts from OpenManus into the Chujai framework. These recommendations focus on practical implementation details while respecting and enhancing Chujai's current structure.
 
 ## Core Agent System
 
 ### BaseAgent Implementation
 
 ```python
-# zombitxanus/core/agent/base_agent.py
+# Chujai/core/agent/base_agent.py
 
 from abc import ABC, abstractmethod
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
-from zombitxanus.models.base_model import BaseModel as LLMModel
-from zombitxanus.core.memory.base_memory import BaseMemory
-from zombitxanus.core.schema import AgentState, Message
+from Chujai.models.base_model import BaseModel as LLMModel
+from Chujai.core.memory.base_memory import BaseMemory
+from Chujai.core.schema import AgentState, Message
 
 class BaseAgent(BaseModel, ABC):
     """
-    Abstract base class for all zombitxanus agents.
+    Abstract base class for all Chujai agents.
     Provides foundational functionality for state management, memory, and execution.
     """
     # Core attributes
@@ -83,14 +83,14 @@ class BaseAgent(BaseModel, ABC):
 ### ToolAgent Implementation
 
 ```python
-# zombitxanus/core/agent/tool_agent.py
+# Chujai/core/agent/tool_agent.py
 
 from typing import Dict, List, Optional
 from pydantic import Field
 
-from zombitxanus.core.agent.base_agent import BaseAgent
-from zombitxanus.core.schema import Message, ToolCall
-from zombitxanus.tools.base.tool_collection import ToolCollection
+from Chujai.core.agent.base_agent import BaseAgent
+from Chujai.core.schema import Message, ToolCall
+from Chujai.tools.base.tool_collection import ToolCollection
 
 class ToolAgent(BaseAgent):
     """
@@ -182,13 +182,13 @@ class ToolAgent(BaseAgent):
 ### HybridAgent Implementation
 
 ```python
-# zombitxanus/core/agent/hybrid_agent.py
+# Chujai/core/agent/hybrid_agent.py
 
 from typing import Dict, List, Optional
 from pydantic import Field
 
-from zombitxanus.core.agent.tool_agent import ToolAgent
-from zombitxanus.core.flow.consensus_flow import ConsensusFlow
+from Chujai.core.agent.tool_agent import ToolAgent
+from Chujai.core.flow.consensus_flow import ConsensusFlow
 
 class HybridAgent(ToolAgent):
     """
@@ -304,15 +304,15 @@ class HybridAgent(ToolAgent):
 ### PlanningTool Implementation
 
 ```python
-# zombitxanus/tools/planning/planning_tool.py
+# Chujai/tools/planning/planning_tool.py
 
 from typing import Dict, List, Optional
 import time
 import json
 from pydantic import Field
 
-from zombitxanus.tools.base.tool import BaseTool
-from zombitxanus.tools.base.tool_result import ToolResult
+from Chujai.tools.base.tool import BaseTool
+from Chujai.tools.base.tool_result import ToolResult
 
 class PlanningTool(BaseTool):
     """
@@ -424,16 +424,16 @@ class PlanningTool(BaseTool):
 ### PlanningFlow Implementation
 
 ```python
-# zombitxanus/core/flow/planning_flow.py
+# Chujai/core/flow/planning_flow.py
 
 from typing import Dict, List, Optional, Tuple, Union
 import time
 from pydantic import Field
 
-from zombitxanus.core.agent.base_agent import BaseAgent
-from zombitxanus.core.flow.base_flow import BaseFlow
-from zombitxanus.models.base_model import BaseModel as LLMModel
-from zombitxanus.tools.planning.planning_tool import PlanningTool
+from Chujai.core.agent.base_agent import BaseAgent
+from Chujai.core.flow.base_flow import BaseFlow
+from Chujai.models.base_model import BaseModel as LLMModel
+from Chujai.tools.planning.planning_tool import PlanningTool
 
 class PlanningFlow(BaseFlow):
     """
@@ -507,7 +507,7 @@ class PlanningFlow(BaseFlow):
 ### BaseTool Implementation
 
 ```python
-# zombitxanus/tools/base/tool.py
+# Chujai/tools/base/tool.py
 
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Optional
@@ -515,7 +515,7 @@ from pydantic import BaseModel, Field
 
 class BaseTool(ABC, BaseModel):
     """
-    Abstract base class for all tools in the zombitxanus framework.
+    Abstract base class for all tools in the Chujai framework.
     Provides foundation for tool definition, parameter specification, and execution.
     """
     name: str
@@ -555,11 +555,11 @@ class BaseTool(ABC, BaseModel):
 ### ToolCollection Implementation
 
 ```python
-# zombitxanus/tools/base/tool_collection.py
+# Chujai/tools/base/tool_collection.py
 
 from typing import Any, Dict, List, Optional
-from zombitxanus.tools.base.tool import BaseTool
-from zombitxanus.tools.base.tool_result import ToolResult, ToolFailure
+from Chujai.tools.base.tool import BaseTool
+from Chujai.tools.base.tool_result import ToolResult, ToolFailure
 
 class ToolCollection:
     """
@@ -609,14 +609,14 @@ class ToolCollection:
 ### BrowserTool Implementation
 
 ```python
-# zombitxanus/tools/web/browser_tool.py
+# Chujai/tools/web/browser_tool.py
 
 from typing import Dict, Optional
 import asyncio
 from pydantic import Field
 
-from zombitxanus.tools.base.tool import BaseTool
-from zombitxanus.tools.base.tool_result import ToolResult, ToolFailure
+from Chujai.tools.base.tool import BaseTool
+from Chujai.tools.base.tool_result import ToolResult, ToolFailure
 
 class BrowserTool(BaseTool):
     """
@@ -726,7 +726,7 @@ class BrowserTool(BaseTool):
 ### BaseModel Implementation
 
 ```python
-# zombitxanus/models/base_model.py
+# Chujai/models/base_model.py
 
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Union
@@ -792,14 +792,14 @@ class BaseModel(PydanticBaseModel, ABC):
 ### OpenAIModel Implementation
 
 ```python
-# zombitxanus/models/openai_model.py
+# Chujai/models/openai_model.py
 
 from typing import Dict, List, Optional, Union
 import json
 import os
 from pydantic import Field
 
-from zombitxanus.models.base_model import BaseModel, Message, ModelResponse, ToolCall
+from Chujai.models.base_model import BaseModel, Message, ModelResponse, ToolCall
 
 class OpenAIModel(BaseModel):
     """
@@ -936,7 +936,7 @@ class OpenAIModel(BaseModel):
 ### BaseMemory Implementation
 
 ```python
-# zombitxanus/core/memory/base_memory.py
+# Chujai/core/memory/base_memory.py
 
 from typing import Dict, List, Optional
 from pydantic import BaseModel, Field
@@ -999,14 +999,14 @@ class BaseMemory(BaseModel):
 ### HybridMemory Implementation
 
 ```python
-# zombitxanus/core/memory/hybrid_memory.py
+# Chujai/core/memory/hybrid_memory.py
 
 from typing import Dict, List, Optional
 import json
 import os
 from pydantic import Field
 
-from zombitxanus.core.memory.base_memory import BaseMemory, Message
+from Chujai.core.memory.base_memory import BaseMemory, Message
 
 class HybridMemory(BaseMemory):
     """
@@ -1024,7 +1024,7 @@ class HybridMemory(BaseMemory):
         
         # Set default storage path if not provided
         if self.persistence and not self.storage_path:
-            self.storage_path = os.path.expanduser("~/.zombitxanus/memory")
+            self.storage_path = os.path.expanduser("~/.Chujai/memory")
         
         # Load persistent memory if enabled
         if self.persistence:
@@ -1109,7 +1109,7 @@ class HybridMemory(BaseMemory):
 ### Main Entry Point
 
 ```python
-# zombitxanus/main.py
+# Chujai/main.py
 
 import argparse
 import asyncio
@@ -1117,14 +1117,14 @@ import os
 import sys
 from typing import Dict, Optional
 
-from zombitxanus.core.agent.hybrid_agent import HybridAgent
-from zombitxanus.core.config import AgentConfig
-from zombitxanus.ui.cli import CLI
+from Chujai.core.agent.hybrid_agent import HybridAgent
+from Chujai.core.config import AgentConfig
+from Chujai.ui.cli import CLI
 
 async def main():
-    """Main entry point for the zombitxanus framework"""
+    """Main entry point for the Chujai framework"""
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description="zombitxanus - Autonomous Networked Utility System")
+    parser = argparse.ArgumentParser(description="Chujai - Autonomous Networked Utility System")
     parser.add_argument("--config", type=str, default="config.yaml", help="Path to configuration file")
     parser.add_argument("--mode", type=str, default="single", choices=["single", "multi"], help="Agent mode")
     parser.add_argument("--task", type=str, help="Task description")
@@ -1187,7 +1187,7 @@ if __name__ == "__main__":
 ### Configuration System
 
 ```python
-# zombitxanus/core/config.py
+# Chujai/core/config.py
 
 from typing import Dict, Optional
 import os
@@ -1217,7 +1217,7 @@ class ToolConfig(BaseModel):
 
 class AgentConfig(BaseModel):
     """Configuration for agents"""
-    name: str = "zombitxanus"
+    name: str = "Chujai"
     mode: str = "single"  # "single", "multi"
     model: ModelConfig = Field(default_factory=ModelConfig)
     memory: MemoryConfig = Field(default_factory=MemoryConfig)

@@ -392,4 +392,60 @@ class PlanningFlow(BaseFlow):
 
                 {plan_text}
 
-                Please provide a summary of what wa<response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>
+                Please provide a summary of what was accomplished and any final thoughts.
+                """
+                summary_result = await agent.run(summary_prompt)
+                return f"Plan completed:\n\n{summary_result}"
+            except Exception as inner_e:
+                logger.error(f"Error generating summary with agent: {inner_e}")
+                return f"Plan completed. Unable to generate detailed summary due to error: {str(e)}"
+
+    async def update_plan(self, steps: List[str] = None, add_steps: List[str] = None, 
+                         remove_indices: List[int] = None) -> str:
+        """
+        Update the current plan by adding, replacing or removing steps.
+        Returns the updated plan text.
+        """
+        try:
+            # Update the plan in the planning tool
+            update_args = {"command": "update", "plan_id": self.active_plan_id}
+            
+            if steps is not None:
+                update_args["steps"] = steps
+                
+            if add_steps is not None:
+                update_args["add_steps"] = add_steps
+                
+            if remove_indices is not None:
+                update_args["remove_indices"] = remove_indices
+                
+            result = await self.planning_tool.execute(**update_args)
+            
+            # Get the updated plan text
+            return await self._get_plan_text()
+        except Exception as e:
+            logger.error(f"Error updating plan: {e}")
+            return f"Error updating plan: {str(e)}"
+
+    async def add_notes_to_step(self, step_index: int, notes: str) -> str:
+        """
+        Add notes to a specific step in the plan.
+        Returns the updated plan text.
+        """
+        try:
+            await self.planning_tool.execute(
+                command="add_notes",
+                plan_id=self.active_plan_id,
+                step_index=step_index,
+                notes=notes
+            )
+            return await self._get_plan_text()
+        except Exception as e:
+            logger.error(f"Error adding notes to step: {e}")
+            return f"Error adding notes to step: {str(e)}"
+
+    async def get_plan(self) -> str:
+        """
+        Get the current plan text.
+        """
+        return await self._get_plan_text()

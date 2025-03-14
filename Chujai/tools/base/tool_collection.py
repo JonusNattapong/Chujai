@@ -140,7 +140,7 @@ class ToolCollection:
         
         return tool_info
     
-    def discover_tools(self, package_name: str = "anus.tools") -> int:
+    def discover_tools(self, package_name: str = "Chujai.tools") -> int:
         """
         Discover tools in the specified package.
         
