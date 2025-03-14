@@ -5,6 +5,6 @@ This module contains user interface components:
 - CLI: Command-line interface
 """
 
-from zombitxanus.ui.cli import CLI
+from Chujai.ui.cli import CLI
 
 __all__ = ["CLI"]
