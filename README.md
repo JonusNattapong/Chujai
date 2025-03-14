@@ -1,7 +1,7 @@
 # 🍑 Chujai AI: ระบบอัตโนมัติเครือข่ายอัจฉริยะ
 
 <p align="center">
-  <img src="assets/anus_logo.png" alt="Chujai AI Logo" width="200"/>
+  <img src="assets/chujai_logo.png" alt="Chujai AI Logo" width="200"/>
 </p>
 
 <p align="center">
@@ -23,6 +23,7 @@
 - [การมีส่วนร่วม](#-การมีส่วนร่วม)
 - [ชุมชน](#-ชุมชน)
 - [ลิขสิทธิ์](#-ลิขสิทธิ์)
+- [Using Mistral AI](#-using-mistral-ai)
 
 ## 🌟 บทนำ
 
@@ -596,3 +597,127 @@ mypy chujai
 ## 📝 ลิขสิทธิ์
 
 Chujai เผยแพร่ภายใต้ [MIT License](LICENSE).
+
+## Using Mistral AI
+
+Thainus supports integration with Mistral AI, a powerful LLM provider with a range of models.
+
+### Setup
+
+1. Obtain a Mistral AI API key from [https://console.mistral.ai/](https://console.mistral.ai/)
+2. Create a `.env` file in the root directory based on `.env.example`
+3. Add your Mistral API key to the `.env` file:
+   ```
+   MISTRAL_API_KEY=your-api-key-here
+   ```
+
+### Available Models
+
+Mistral offers several models with different capabilities and pricing:
+
+- `mistral-tiny`: Fast, efficient model for simple tasks
+- `mistral-small`: Balanced model for general use
+- `mistral-medium`: More capable model for complex tasks
+- `mistral-large`: Most capable Mistral model, supports tools
+- `open-mixtral-8x7b`: Open-source Mixtral model
+
+### Basic Usage
+
+```python
+from app.llm import LLM, MistralModels
+from app.schema import Message
+
+# Create an LLM instance configured for Mistral
+llm = LLM(
+    provider="mistral",
+    model=MistralModels.MEDIUM,
+    api_key="your-api-key-here",
+    temperature=0.7,
+)
+
+# Create messages
+system_msg = Message.system_message("You are a helpful AI assistant.")
+user_msg = Message.user_message("What is the capital of France?")
+
+# Get a response
+response = await llm.ask(messages=[user_msg], system_msgs=[system_msg])
+print(response)
+```
+
+### Using with Planning Flow
+
+```python
+from app.agent.base import BaseAgent
+from app.flow.planning import PlanningFlow
+
+# Create a simple agent
+agent = BaseAgent(name="assistant")
+
+# Create a planning flow using Mistral
+flow = PlanningFlow(
+    agents=agent,
+    llm_provider="mistral",
+    llm_model=MistralModels.MEDIUM
+)
+
+# Execute the flow
+result = await flow.execute("Create a plan for a blog post about AI")
+print(result)
+```
+
+### Tool Calling with Mistral
+
+Note: Tool calling is only supported on `mistral-large` and `mistral-large-latest` models.
+
+```python
+from app.llm import LLM, MistralModels
+from app.schema import Message
+
+# Create an LLM instance configured for Mistral with tool support
+llm = LLM(
+    provider="mistral",
+    model=MistralModels.LARGE,
+    api_key="your-api-key-here"
+)
+
+# Define a tool
+calculator_tool = {
+    "type": "function",
+    "function": {
+        "name": "calculator",
+        "description": "Calculate mathematical expressions",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "expression": {
+                    "type": "string",
+                    "description": "The mathematical expression to evaluate"
+                }
+            },
+            "required": ["expression"]
+        }
+    }
+}
+
+# Create messages
+system_msg = Message.system_message("You are a helpful AI assistant.")
+user_msg = Message.user_message("Calculate 15 * 7")
+
+# Get a response with tool calling
+response = await llm.ask_tool(
+    messages=[user_msg], 
+    system_msgs=[system_msg],
+    tools=[calculator_tool],
+    tool_choice="auto"
+)
+
+# Process the response
+print(f"Content: {response.content}")
+for call in response.tool_calls:
+    print(f"Tool: {call.function.name}")
+    print(f"Arguments: {call.function.arguments}")
+```
+
+### Examples
+
+Check out the examples in `app/examples/mistral_example.py` for more usage patterns.

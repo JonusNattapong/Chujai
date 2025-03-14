@@ -117,12 +117,12 @@ class HybridAgent(ToolAgent):
         
         # Decide on mode based on complexity
         if complexity < 3.0:
-            logging.info(f"Task complexity ({complexity:.1f}) below threshold (3.0). ANUS staying tight in single-agent mode.")
-            logging.info("This task is so simple even a constipated ANUS could handle it.")
+            logging.info(f"Task complexity ({complexity:.1f}) below threshold (3.0). Chujai staying tight in single-agent mode.")
+            logging.info("This task is so simple even a constipated Chujai could handle it.")
             return super().execute(task, **kwargs)
         else:
-            logging.info(f"Task complexity ({complexity:.1f}) above threshold (3.0). ANUS expanding to multi-agent mode.")
-            logging.info("ANUS is expanding to accommodate multiple agents for this complex task.")
+            logging.info(f"Task complexity ({complexity:.1f}) above threshold (3.0). Chujai expanding to multi-agent mode.")
+            logging.info("Chujai is expanding to accommodate multiple agents for this complex task.")
             return self._execute_multi_agent(task, **kwargs)
     
     def _execute_multi_agent(self, task: str, **kwargs) -> Dict[str, Any]:
@@ -136,8 +136,8 @@ class HybridAgent(ToolAgent):
         Returns:
             A dictionary containing the aggregated results.
         """
-        logging.info("ANUS expanding to accommodate multiple agents")
-        logging.info("Task decomposed into subtasks for optimal ANUS performance")
+        logging.info("Chujai expanding to accommodate multiple agents")
+        logging.info("Task decomposed into subtasks for optimal Chujai performance")
         
         # For simple calculator tasks, use direct execution
         if task.lower().startswith("calculate"):
@@ -184,8 +184,8 @@ class HybridAgent(ToolAgent):
         )
         results["critic"] = critic_result
         
-        logging.info("All agents have finished their tasks. ANUS is aggregating results...")
-        logging.info("ANUS has successfully completed multi-agent processing")
+        logging.info("All agents have finished their tasks. Chujai is aggregating results...")
+        logging.info("Chujai has successfully completed multi-agent processing")
         
         return {
             "task": task,

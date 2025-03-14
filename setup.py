@@ -9,12 +9,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="chujai-ai",
     version="0.1.0",
-    author="Chujai AI Team",
-    author_email="chujai-ai@example.com",
+    author="zombitx64",
+    author_email="zombitx64@gmail.com",
     description="An open-source AI agent framework for task automation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/chujai-ai/chujai",
+    url="https://github.com/JonusNattapong/Chujai",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

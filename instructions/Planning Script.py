@@ -10,6 +10,7 @@ from app.llm import LLM
 from app.logger import logger
 from app.schema import AgentState, Message
 from app.tool import PlanningTool
+from app.config import get_api_key, get_api_base
 
 
 class PlanningFlow(BaseFlow):
@@ -36,6 +37,24 @@ class PlanningFlow(BaseFlow):
         if "planning_tool" not in data:
             planning_tool = PlanningTool()
             data["planning_tool"] = planning_tool
+            
+        # Configure LLM with provider and API key if provided
+        if "llm_provider" in data:
+            provider = data.pop("llm_provider")
+            model = data.pop("llm_model", None)
+            
+            # Create LLM instance with appropriate configuration
+            llm_config = {
+                "provider": provider,
+                "api_key": get_api_key(provider),
+                "api_base": get_api_base(provider)
+            }
+            
+            # Add model if specified
+            if model:
+                llm_config["model"] = model
+                
+            data["llm"] = LLM(**llm_config)
 
         # Call parent's init with the processed data
         super().__init__(agents, **data)

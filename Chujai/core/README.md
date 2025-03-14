@@ -1,6 +1,6 @@
-# zombitxanus core module
+# chujai core module
 
-โมดูลนี้มีฟังก์ชั่นหลักของระบบตัวแทน Zombitxanus AI รวมถึง::
+โมดูลนี้มีฟังก์ชั่นหลักของระบบตัวแทน chujai AI รวมถึง::
 
 - ระบบ orchestration Agent
 - กรอบการวางแผนงานและการดำเนินการ
